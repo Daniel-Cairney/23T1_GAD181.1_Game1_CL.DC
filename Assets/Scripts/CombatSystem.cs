@@ -28,24 +28,30 @@ namespace DanCon
                 {
                     highAttack.Play("High Attack");
 
-                    /* switch (Choices)
+                    switch (Choices)
                     {
-                        // I want to code the attack response into the attack
-                        // robotOne's characterStance is High Attack && robotTwo is lowAttack then maxHP --
-                        // 
-                        case :
-                            // code block
-                            break;
-                        case :
-                            // code block
-                            break;
-                        default:
-                            // code block
-                            break;
-                    }*/
+                        case "High_Attack":
+                        
+                            switch (otherPlayerChoice)
+                            {
+                        
+                            // I want to code the attack response into the attack
+                            // robotOne's characterStance is High Attack && robotTwo is lowAttack then maxHP --
+                            // 
+                            case :
+                                // code block
+                                break;
+                            case :
+                                // code block
+                                break;
+                            default:
+                                // code block
+                                break;
+                    }
+                    }
                 }
 
-                if (Input.GetKeyDown(KeyCode.S))
+                else if (Input.GetKeyDown(KeyCode.S))
                 {
                     lowAttack.Play("Low Attack");
 
@@ -66,7 +72,7 @@ namespace DanCon
                     }*/
                 }
 
-                if (Input.GetKeyDown(KeyCode.D))
+                else if (Input.GetKeyDown(KeyCode.D))
                 {
                     midAttack.Play("Mid Attack");
                     /* switch (Choices)
