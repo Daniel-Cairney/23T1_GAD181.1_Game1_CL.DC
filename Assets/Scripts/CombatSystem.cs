@@ -10,7 +10,6 @@ namespace DanCon
     {
 
         private string[] Choices;
-        
 
         [SerializeField] private Animation highAttack;
         [SerializeField] private Animation lowAttack;
