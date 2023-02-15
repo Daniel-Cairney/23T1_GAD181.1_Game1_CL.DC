@@ -14,7 +14,6 @@ namespace DanCon
         private string[] Choices;
 
 
-
         [SerializeField] private Animation highAttack;
         [SerializeField] private Animation lowAttack;
         [SerializeField] private Animation midAttack;
@@ -28,7 +27,7 @@ namespace DanCon
                 {
                     highAttack.Play("High Attack");
 
-                    switch (Choices)
+                    /*switch (Choices)
                     {
                         case "High_Attack":
                         
@@ -47,7 +46,7 @@ namespace DanCon
                             default:
                                 // code block
                                 break;
-                    }
+                    }*/
                     }
                 }
 
