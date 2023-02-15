@@ -3,29 +3,97 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CombatSystem : MonoBehaviour
+namespace DanCon
+
 {
 
-    [SerializeField] private Animation highAttack;
-    [SerializeField] private Animation lowAttack;
-    [SerializeField] private Animation midAttack;
 
-    void Update()
+    public class CombatSystem : MonoBehaviour
     {
-        
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-            highAttack.Play("High Attack");
-        }
 
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            lowAttack.Play("Low Attack");
-        }
+        private string[] Choices;
 
-        if(Input.GetKeyDown(KeyCode.D))
+
+
+        [SerializeField] private Animation highAttack;
+        [SerializeField] private Animation lowAttack;
+        [SerializeField] private Animation midAttack;
+
+        void Update()
         {
-            midAttack.Play("Mid Attack");
+            if (gameObject.activeSelf)
+
+            {
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    highAttack.Play("High Attack");
+
+                    switch (Choices)
+                    {
+                        case "High_Attack":
+                        
+                            switch (otherPlayerChoice)
+                            {
+                        
+                            // I want to code the attack response into the attack
+                            // robotOne's characterStance is High Attack && robotTwo is lowAttack then maxHP --
+                            // 
+                            case :
+                                // code block
+                                break;
+                            case :
+                                // code block
+                                break;
+                            default:
+                                // code block
+                                break;
+                    }
+                    }
+                }
+
+                else if (Input.GetKeyDown(KeyCode.S))
+                {
+                    lowAttack.Play("Low Attack");
+
+                    /* switch (Choices)
+                    {
+                        // I want to code the attack response into the attack
+                        // robotOne's characterStance is High Attack && robotTwo is lowAttack then maxHP --
+                        // 
+                        case :
+                            // code block
+                            break;
+                        case :
+                            // code block
+                            break;
+                        default:
+                            // code block
+                            break;
+                    }*/
+                }
+
+                else if (Input.GetKeyDown(KeyCode.D))
+                {
+                    midAttack.Play("Mid Attack");
+                    /* switch (Choices)
+                    {
+                        // I want to code the attack response into the attack
+                        // robotOne's characterStance is High Attack && robotTwo is lowAttack then maxHP --
+                        // 
+                        case :
+                            // code block
+                            break;
+                        case :
+                            // code block
+                            break;
+                        default:
+                            // code block
+                            break;
+                    }*/
+
+                }
+            }
+
         }
     }
 }

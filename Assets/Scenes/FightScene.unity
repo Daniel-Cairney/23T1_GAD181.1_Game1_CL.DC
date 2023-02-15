@@ -362,8 +362,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1463096370}
   - component: {fileID: 1463096369}
-  - component: {fileID: 1463096371}
   - component: {fileID: 1463096372}
+  - component: {fileID: 1463096373}
   m_Layer: 0
   m_Name: RobotSamurai
   m_TagString: Untagged
@@ -438,22 +438,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &1463096371
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463096368}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: d4f7ac68ee130a14ebaf779cf426942f, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &1463096372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,3 +453,19 @@ MonoBehaviour:
   highAttack: {fileID: 0}
   lowAttack: {fileID: 0}
   midAttack: {fileID: 0}
+--- !u!111 &1463096373
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463096368}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: d4f7ac68ee130a14ebaf779cf426942f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: d4f7ac68ee130a14ebaf779cf426942f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
