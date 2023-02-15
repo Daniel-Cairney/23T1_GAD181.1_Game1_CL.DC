@@ -15,7 +15,6 @@ namespace DanCon
         public void Settings()
         {
             SceneManager.LoadScene("Settings");
-
         }
 
         public void QuitGame()
@@ -27,6 +26,13 @@ namespace DanCon
         {
             SceneManager.LoadScene("MainMenu");
         }
+   
+        public void TutorialMenu()
+        {
+            SceneManager.LoadScene("Tutorial");
+        } 
+    
+    
     }
 
 }
