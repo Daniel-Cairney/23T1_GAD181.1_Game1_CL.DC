@@ -12,21 +12,12 @@ namespace DanCon
 
         private string[] Choices;
 
+        public Image fight;
+
         private float timeBtwAtk;
         public float startTimeBtwAtk;
-        
+        public Sprite SamuraiPlaceholder_0, SamuraiPlaceholder_1, SamuraiPlaceholder_2, SamuraiPlaceholder_3;
 
-        [SerializeField] private Animation highAttack;
-        [SerializeField] private Animation lowAttack;
-        [SerializeField] private Animation midAttack;
-
-
-        private void Awake()
-        {
-            highAttack = GetComponent<Animation>();
-            lowAttack = GetComponent<Animation>();
-            midAttack = GetComponent<Animation>();
-        }
 
         void Update()
         {
@@ -38,17 +29,17 @@ namespace DanCon
 
                     if (Input.GetKeyDown(KeyCode.A))
                     {   // animation plays when A is pressed - but won't play again
-                        highAttack.Play("High Attack");
+                        fight.sprite = SamuraiPlaceholder_3;
                     }
 
                     else if (Input.GetKeyDown(KeyCode.S))
                     {
-                        lowAttack.Play("Low Attack");
+                        fight.sprite = SamuraiPlaceholder_2;
                     }
 
                     else if (Input.GetKeyDown(KeyCode.D))
                     {
-                        midAttack.Play("Mid Attack");
+                        fight.sprite = SamuraiPlaceholder_1;
                     }
 
                     //timeBtwAtk = startTimeBtwAtk;
@@ -61,36 +52,7 @@ namespace DanCon
                 }
             }
 
-            if (gameObject.CompareTag("PlayerTwo"))
-
-            {
-                if (timeBtwAtk <= 0)
-                {
-
-                    if (Input.GetKeyDown(KeyCode.LeftArrow))
-                    {   // animation plays when A is pressed - but won't play again
-                        highAttack.Play("High Attack");
-                    }
-
-                    else if (Input.GetKeyDown(KeyCode.DownArrow))
-                    {
-                        lowAttack.Play("Low Attack");
-                    }
-
-                    else if (Input.GetKeyDown(KeyCode.RightArrow))
-                    {
-                        midAttack.Play("Mid Attack");
-                    }
-
-                    //timeBtwAtk = startTimeBtwAtk;
-
-                }
-
-                else
-                {
-                    timeBtwAtk -= Time.deltaTime;
-                }
-            }
+           
 
         }
     }
