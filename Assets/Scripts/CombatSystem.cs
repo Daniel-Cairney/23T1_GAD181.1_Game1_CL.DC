@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace DanCon
 {
@@ -12,18 +13,19 @@ namespace DanCon
         private string[] Choices;
 
         private float timeBtwAtk;
-        [SerializeField] private float startTimeBtwAtk;
+        public float startTimeBtwAtk;
+        
 
-        private Animator highAttack;
-        private Animator lowAttack;
-        private Animator midAttack;
+        [SerializeField] private Animation highAttack;
+        [SerializeField] private Animation lowAttack;
+        [SerializeField] private Animation midAttack;
 
 
         private void Awake()
         {
-            highAttack = GetComponent<Animator>();
-            lowAttack = GetComponent<Animator>();
-            midAttack = GetComponent<Animator>();
+            highAttack = GetComponent<Animation>();
+            lowAttack = GetComponent<Animation>();
+            midAttack = GetComponent<Animation>();
         }
 
         void Update()
@@ -36,74 +38,53 @@ namespace DanCon
 
                     if (Input.GetKeyDown(KeyCode.A))
                     {   // animation plays when A is pressed - but won't play again
-                        highAttack.SetBool("High Attack", Input.GetKeyDown(KeyCode.A) == true );
-                        
-                        /*switch (Choices)
-                        {
-                            case "High_Attack":
-
-                                switch (playerTwoChoice)
-                                {
-
-                                case :
-                                    // code block
-                                    break;
-                                case :
-                                    // code block
-                                    break;
-                                default:
-                                    // code block
-                                    break;
-                        }*/
+                        highAttack.Play("High Attack");
                     }
 
                     else if (Input.GetKeyDown(KeyCode.S))
                     {
                         lowAttack.Play("Low Attack");
-
-                        /* switch (Choices)
-                        {
-                            // I want to code the attack response into the attack
-                            // robotOne's characterStance is High Attack && robotTwo is lowAttack then maxHP --
-                            // 
-                            case :
-                                // code block
-                                break;
-                            case :
-                                // code block
-                                break;
-                            default:
-                                // code block
-                                break;
-                        }*/
                     }
 
                     else if (Input.GetKeyDown(KeyCode.D))
                     {
                         midAttack.Play("Mid Attack");
-                        /* switch (Choices)
-                        {
-                            // I want to code the attack response into the attack
-                            // robotOne's characterStance is High Attack && robotTwo is lowAttack then maxHP --
-                            // 
-                            case :
-                                // code block
-                                break;
-                            case :
-                                // code block
-                                break;
-                            default:
-                                // code block
-                                break;
-                        }*/
-
                     }
 
-                    timeBtwAtk = startTimeBtwAtk;
+                    //timeBtwAtk = startTimeBtwAtk;
 
                 }
 
-                
+                else
+                {
+                    timeBtwAtk -= Time.deltaTime;
+                }
+            }
+
+            if (gameObject.CompareTag("PlayerTwo"))
+
+            {
+                if (timeBtwAtk <= 0)
+                {
+
+                    if (Input.GetKeyDown(KeyCode.LeftArrow))
+                    {   // animation plays when A is pressed - but won't play again
+                        highAttack.Play("High Attack");
+                    }
+
+                    else if (Input.GetKeyDown(KeyCode.DownArrow))
+                    {
+                        lowAttack.Play("Low Attack");
+                    }
+
+                    else if (Input.GetKeyDown(KeyCode.RightArrow))
+                    {
+                        midAttack.Play("Mid Attack");
+                    }
+
+                    //timeBtwAtk = startTimeBtwAtk;
+
+                }
 
                 else
                 {
