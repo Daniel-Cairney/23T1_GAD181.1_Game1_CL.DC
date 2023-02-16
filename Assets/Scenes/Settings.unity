@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 1279498441}
   - component: {fileID: 1279498440}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -911,7 +911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 599274343210658335, guid: ab7b3de7729437b4d967bd41b5c3a635, type: 3}
       propertyPath: m_Name
-      value: MainMenu
+      value: MenuManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab7b3de7729437b4d967bd41b5c3a635, type: 3}
