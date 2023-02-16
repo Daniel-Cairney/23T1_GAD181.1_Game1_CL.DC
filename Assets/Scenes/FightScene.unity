@@ -636,7 +636,7 @@ GameObject:
   - component: {fileID: 1463096373}
   m_Layer: 0
   m_Name: RobotSamurai
-  m_TagString: Untagged
+  m_TagString: PlayerOne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -720,25 +720,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e1ae9b6cb820c5448304fe3573a2318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highAttack: {fileID: 0}
-  lowAttack: {fileID: 0}
-  midAttack: {fileID: 0}
---- !u!111 &1463096373
-Animation:
+  startTimeBtwAtk: 0
+--- !u!95 &1463096373
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463096368}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: d4f7ac68ee130a14ebaf779cf426942f, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: d4f7ac68ee130a14ebaf779cf426942f, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 00a734234d8733641bd23686ed0aba29, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1486230254
 GameObject:
   m_ObjectHideFlags: 0
