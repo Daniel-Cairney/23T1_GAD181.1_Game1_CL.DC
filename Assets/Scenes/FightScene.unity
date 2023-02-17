@@ -2015,6 +2015,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2296960699775963327, guid: eed294fafdfcbbe40b38afaffb6d3e53, type: 3}
+      propertyPath: stepRight
+      value: 119
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296960699775963327, guid: eed294fafdfcbbe40b38afaffb6d3e53, type: 3}
       propertyPath: SamuraiPlaceholder_0
       value: 
       objectReference: {fileID: 831144111, guid: 6d538381c3a61be4b8ba7f63697a4593, type: 3}
