@@ -216,7 +216,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390381242
 GameObject:
@@ -1014,31 +1014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnEnterTrigger2D:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1793536553}
-        m_TargetAssemblyTypeName: DanCon.ThreeStanceAttack, Assembly-CSharp
-        m_MethodName: PlayerOneAttack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DanCon.DamageCalculator, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1001 &919702066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1591,7 +1567,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1793536549
 GameObject:
@@ -1722,14 +1698,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackResult: {fileID: 0}
-  playerOne: {fileID: 1357598369}
-  playerTwo: {fileID: 635432072}
-  upAttackOne: 119
-  midAttackOne: 0
-  downAttackOne: 0
-  upAttackTwo: 273
-  midAttackTwo: 0
-  downAttackTwo: 0
+  playerOne: 
+  playerTwo: 
+  attackChoices:
+  - UpAttack
+  - MidAttack
+  - LowAttack
 --- !u!114 &1793536554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1951,7 +1925,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2296960699370113076
 PrefabInstance:
