@@ -7,14 +7,14 @@ public class FightZoneTrigger : MonoBehaviour
 {
 
     public UnityEvent OnEnterTrigger;
-    private Collider _collider;
+    private Collider2D _collider;
 
     private void Awake()
     {
-        _collider = GetComponent<Collider>();
+        _collider = GetComponent<Collider2D>();
         _collider.isTrigger = true;
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
 
         // I'm just making sure that the trigger is activtaing - It Is!
@@ -29,7 +29,7 @@ public class FightZoneTrigger : MonoBehaviour
     {
         if (_collider == false)
         {
-            GetComponent<Collider>().enabled = true;
+            GetComponent<Collider2D>().enabled = true;
         }
     }
 }
