@@ -31,7 +31,12 @@ namespace DanCon
         {
             SceneManager.LoadScene("Tutorial");
         } 
-    
+        
+        public void TutorialSecondPage()
+        {
+            SceneManager.LoadScene("Tutorial2");
+        }
+
     
     }
 
