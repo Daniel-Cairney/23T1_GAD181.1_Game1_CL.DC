@@ -36,6 +36,7 @@ namespace DanCon
         // player tag MAY not be necesary here, but might be relevant if we make changes in the future
         private void Update()
          {
+                        
             if (gameObject.CompareTag("PlayerOne"))
             {
                 
@@ -80,6 +81,8 @@ namespace DanCon
                 }
             }
 
+            // controls for player 2
+
             if (gameObject.CompareTag("PlayerTwo"))
             {
                 if (Input.GetKeyDown(stepLeft))
@@ -118,7 +121,7 @@ namespace DanCon
                     //timeBtwAtk = startTimeBtwAtk;
 
                 }
-
+                // the timer between attacks isn't working yet
                 else
                 {
                     timeBtwAtk -= Time.deltaTime;

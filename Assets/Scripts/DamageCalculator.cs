@@ -9,69 +9,36 @@ namespace DanCon
     public class DamageCalculator : MonoBehaviour
     {
 
-        [SerializeField] private TMP_Text result;
-        public string choices;
-       
+        [SerializeField] private GameObject playerOne;
+        [SerializeField] private GameObject playerTwo;
 
-        void Play(string playerOneChoice)
+        [SerializeField] private int playerOneLife;
+        [SerializeField] private int playerTwoLife;
+
+        public void Update()
         {
-            string playerTwoChoice = choices;
-
-            switch (playerTwoChoice)
+            if (playerOneLife <= 0)
             {
-                case "High Attack":
-
-                    switch (playerOneChoice)
-                    {
-
-                        case "High Attack":
-                            result.text = "Parry";
-                            break;
-                        case "Mid attack":
-                            result.text = "You Were Hit";
-                            break;
-                        case "Low Attack":
-                            result.text = "You Dealt Damage";
-                            break;
-                    }
-                    break;
-
-                case "Mid Attack":
-
-                    switch (playerOneChoice)
-                    {
-
-                        case "High Attack":
-                            result.text = "You Dealt Damage";
-                            break;
-                        case "Mid attack":
-                            result.text = "Parry";
-                            break;
-                        case "Low Attack":
-                            result.text = "You Were Hit";
-                            break;
-                    }
-                    break;
-
-                case "Low Attack":
-
-                    switch (playerOneChoice)
-                    {
-
-                        case "High Attack":
-                            result.text = "You Were Hit";
-                            break;
-                        case "Mid attack":
-                            result.text = "You Dealt Damage";
-                            break;
-                        case "Low Attack":
-                            result.text = "Parry";
-                            break;
-                    }
-                    break;
+                playerOne.SetActive(false);
             }
 
+            if (playerTwoLife <= 0)
+            {
+                playerTwo.SetActive(false);
+            }
 
         }
+        // these must be public so they can be referenced in ThreeStanceAttack.cs
+        // 
+        public void HurtPlayerOne()
+        {
+            playerOneLife--;
+        }
+
+        public void HurtPlayerTwo()
+        { 
+            playerTwoLife--;
+        }
+
     }
 }
