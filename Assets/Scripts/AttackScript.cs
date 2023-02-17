@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 namespace DanCon
 {
-    public class ThreeStanceAttack : MonoBehaviour
+    public class AttackScript : MonoBehaviour
     {
-        [SerializeField] private Text attackResult;
+        [SerializeField] private TMP_Text attackResult;
 
         [SerializeField] private string playerOne;
         [SerializeField] private string playerTwo;
@@ -16,8 +16,11 @@ namespace DanCon
         [SerializeField] private string[] attackChoices;
 
 
-        public void PlayerOneAttack()
+        public void Play(string playerOne)
         {
+
+            string playerTwo = attackChoices[2];
+
             switch (playerOne)
             {
 
@@ -26,7 +29,7 @@ namespace DanCon
                     switch (playerTwo)
                     {
                         case "UpAttack":
-
+                            attackResult.text
                             break;
 
                         case "MidAttack":
@@ -37,7 +40,7 @@ namespace DanCon
 
                             break;
                     }
-                    
+
                     break;
 
                 case "MidAttack":
@@ -77,10 +80,6 @@ namespace DanCon
                     break;
 
             }
-        }
-
-        public void PlayerTwoAttack()
-        {
             switch (playerTwo)
             {
 
@@ -140,7 +139,10 @@ namespace DanCon
                     break;
 
             }
-        }
+         }
 
     }
 }
+
+
+
