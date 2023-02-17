@@ -18,7 +18,6 @@ namespace DanCon
 
         public void Play(string playerOne)
         {
-            GetComponent<DamageCalculator>();
             string playerTwo = attackChoices[2];
 
             switch (playerOne)
@@ -37,7 +36,7 @@ namespace DanCon
                             break;
 
                         case "LowAttack":
-                            GetComponent <DamageCalculator>().HurtPlayerOne();
+                            GetComponent<DamageCalculator>().HurtPlayerOne();
                             break;
                     }
 
