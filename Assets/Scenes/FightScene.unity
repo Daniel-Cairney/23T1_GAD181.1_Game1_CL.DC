@@ -1035,16 +1035,40 @@ MonoBehaviour:
   OnEnterTrigger2D:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 2cc7de40c4b3e9a409a4d5e521898569, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1793536553}
+        m_TargetAssemblyTypeName: DanCon.AttackScript, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: UpAttack
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1793536553}
+        m_TargetAssemblyTypeName: DanCon.AttackScript, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MidAttack
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1793536553}
+        m_TargetAssemblyTypeName: DanCon.AttackScript, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LowAttack
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1001 &919702066
@@ -1601,6 +1625,66 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1562097816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1562097818}
+  - component: {fileID: 1562097817}
+  m_Layer: 0
+  m_Name: EventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1562097817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562097816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53066604688d8234493e6458c1cedffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 0
+  keyPressEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &1562097818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562097816}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.3054733, y: 0.745608, z: -0.18073873}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1793536549
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,6 +2097,10 @@ PrefabInstance:
     - target: {fileID: 2296960699775963326, guid: eed294fafdfcbbe40b38afaffb6d3e53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296960699775963327, guid: eed294fafdfcbbe40b38afaffb6d3e53, type: 3}
+      propertyPath: stepRight
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 2296960699775963327, guid: eed294fafdfcbbe40b38afaffb6d3e53, type: 3}
       propertyPath: SamuraiPlaceholder_0

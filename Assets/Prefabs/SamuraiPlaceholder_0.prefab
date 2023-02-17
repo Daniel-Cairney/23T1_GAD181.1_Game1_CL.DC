@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2296960699775963324}
   - component: {fileID: 2296960699775963315}
   - component: {fileID: 2296960699775963327}
-  - component: {fileID: 2296960699775963320}
   m_Layer: 0
   m_Name: SamuraiPlaceholder_0
   m_TagString: PlayerOne
@@ -147,26 +146,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbd5815e9951184e8d0f62b787c1417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startTimeBtwAtk: 0
+  SamuraiPlaceholder_0: {fileID: 0}
+  SamuraiPlaceholder_1: {fileID: 0}
+  SamuraiPlaceholder_2: {fileID: 0}
+  SamuraiPlaceholder_3: {fileID: 0}
   movementSpeed: 15
   stepRight: 119
   stepLeft: 0
   upAttack: 97
   midAttack: 115
   downAttack: 100
---- !u!114 &2296960699775963320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2296960699775963314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e1ae9b6cb820c5448304fe3573a2318, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startTimeBtwAtk: 1
-  SamuraiPlaceholder_0: {fileID: 831144111, guid: 6d538381c3a61be4b8ba7f63697a4593, type: 3}
-  SamuraiPlaceholder_1: {fileID: 1515002149, guid: 6d538381c3a61be4b8ba7f63697a4593, type: 3}
-  SamuraiPlaceholder_2: {fileID: 719489071, guid: 6d538381c3a61be4b8ba7f63697a4593, type: 3}
-  SamuraiPlaceholder_3: {fileID: -2088377474, guid: 6d538381c3a61be4b8ba7f63697a4593, type: 3}

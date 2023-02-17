@@ -6,11 +6,15 @@ using UnityEngine.Events;
 public class EventManager : MonoBehaviour
 {
 
-    UnityEvent attackKey;
+    public KeyCode key;
+    public UnityEvent keyPressEvent;
 
-    private void Start()
+    void Update()
     {
-        
+        if (Input.GetKeyDown(key))
+        {
+            keyPressEvent.Invoke();
+        }
     }
-
 }
+
