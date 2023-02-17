@@ -8,7 +8,7 @@ namespace DanCon
 {
     public class AttackScript : MonoBehaviour
     {
-        [SerializeField] private TMP_Text attackResult;
+        [SerializeField] private Text attackResult;
 
         [SerializeField] private string playerOne;
         [SerializeField] private string playerTwo;
@@ -18,7 +18,7 @@ namespace DanCon
 
         public void Play(string playerOne)
         {
-
+            GetComponent<DamageCalculator>();
             string playerTwo = attackChoices[2];
 
             switch (playerOne)
@@ -29,15 +29,15 @@ namespace DanCon
                     switch (playerTwo)
                     {
                         case "UpAttack":
-                            attackResult.text
+                            attackResult.text = "Parry";
                             break;
 
                         case "MidAttack":
-
+                            GetComponent<DamageCalculator>().HurtPlayerTwo();
                             break;
 
                         case "LowAttack":
-
+                            GetComponent <DamageCalculator>().HurtPlayerOne();
                             break;
                     }
 
@@ -48,15 +48,15 @@ namespace DanCon
                     switch (playerTwo)
                     {
                         case "UpAttack":
-
+                            GetComponent<DamageCalculator>().HurtPlayerTwo();
                             break;
 
                         case "MidAttack":
-
+                            attackResult.text = "Parry";
                             break;
 
                         case "LowAttack":
-
+                            GetComponent<DamageCalculator>().HurtPlayerOne();
                             break;
                     }
                     break;
@@ -66,80 +66,24 @@ namespace DanCon
                     switch (playerTwo)
                     {
                         case "UpAttack":
+                            GetComponent<DamageCalculator>().HurtPlayerOne();
 
                             break;
 
                         case "MidAttack":
+                            GetComponent<DamageCalculator>().HurtPlayerTwo();
 
                             break;
 
                         case "LowAttack":
-
+                            attackResult.text = "Parry";
                             break;
                     }
                     break;
 
             }
-            switch (playerTwo)
-            {
 
-                case "UpAttack":
-
-                    switch (playerOne)
-                    {
-                        case "UpAttack":
-
-                            break;
-
-                        case "MidAttack":
-
-                            break;
-
-                        case "LowAttack":
-
-                            break;
-                    }
-
-                    break;
-
-                case "MidAttack":
-
-                    switch (playerOne)
-                    {
-                        case "UpAttack":
-
-                            break;
-
-                        case "MidAttack":
-
-                            break;
-
-                        case "LowAttack":
-
-                            break;
-                    }
-                    break;
-
-                case "LowAttack":
-
-                    switch (playerOne)
-                    {
-                        case "UpAttack":
-
-                            break;
-
-                        case "MidAttack":
-
-                            break;
-
-                        case "LowAttack":
-
-                            break;
-                    }
-                    break;
-
-            }
-         }
+        }
 
     }
 }

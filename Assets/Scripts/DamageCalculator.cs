@@ -28,7 +28,7 @@ namespace DanCon
             }
 
         }
-        // these must be public so they can be referenced in ThreeStanceAttack.cs
+        // these must be public so they can be referenced in the attack script
         // 
         public void HurtPlayerOne()
         {
