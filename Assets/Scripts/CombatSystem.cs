@@ -12,7 +12,7 @@ namespace DanCon
 
         private string[] Choices;
 
-        public Image fight;
+    
 
         private float timeBtwAtk;
         public float startTimeBtwAtk;
@@ -29,17 +29,17 @@ namespace DanCon
 
                     if (Input.GetKeyDown(KeyCode.A))
                     {   // animation plays when A is pressed - but won't play again
-                        fight.sprite = SamuraiPlaceholder_3;
+                        GetComponent<SpriteRenderer>().sprite = SamuraiPlaceholder_3;
                     }
 
                     else if (Input.GetKeyDown(KeyCode.S))
                     {
-                        fight.sprite = SamuraiPlaceholder_2;
+                        GetComponent<SpriteRenderer>().sprite = SamuraiPlaceholder_2;
                     }
 
                     else if (Input.GetKeyDown(KeyCode.D))
                     {
-                        fight.sprite = SamuraiPlaceholder_1;
+                        GetComponent<SpriteRenderer>().sprite = SamuraiPlaceholder_1;
                     }
 
                     //timeBtwAtk = startTimeBtwAtk;
