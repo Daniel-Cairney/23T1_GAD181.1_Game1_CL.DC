@@ -7,6 +7,7 @@ public class FightZoneTrigger : MonoBehaviour
 {
 
     public UnityEvent OnEnterTrigger2D;
+    public UnityEvent OnExitTrigger2D;
     private Collider2D _collider;
 
     private void Awake()
@@ -20,8 +21,15 @@ public class FightZoneTrigger : MonoBehaviour
         // I'm just making sure that the trigger is activtaing - It Is!
         Debug.Log("TRIGGER button TEST"); // here to test that the Trigger is firing
 
+        OnEnterTrigger2D.Invoke();
 
-            OnEnterTrigger2D.Invoke();
+    }
+
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+        OnExitTrigger2D.Invoke();
 
     }
 

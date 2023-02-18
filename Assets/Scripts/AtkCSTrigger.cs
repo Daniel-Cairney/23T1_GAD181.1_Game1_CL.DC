@@ -5,22 +5,27 @@ using UnityEngine;
 
 public class AtkCSTrigger : MonoBehaviour
 {
-    
-    void OnTriggerEnter2D(Collider2D collider)
+
+    private Collider2D _collider;
+
+    public void TurnOnScript()
     {
         if (gameObject.CompareTag("PlayerOne") && gameObject.CompareTag("PlayerTwo"))
         {
-            AttackScript myScript = collider.gameObject.GetComponent<AttackScript>();
+            AttackScript myScript = _collider.gameObject.GetComponent<AttackScript>();
             myScript.enabled = true;
         }
     }
 
-    void OnTriggerExit2D(Collider2D collider)
+
+    public void TurnOffScript()
     {
         if (gameObject.CompareTag("PlayerOne") && gameObject.CompareTag("PlayerTwo"))
         {
-            AttackScript myScript = collider.gameObject.GetComponent<AttackScript>();
+            AttackScript myScript = _collider.gameObject.GetComponent<AttackScript>();
             myScript.enabled = false;
         }
     }
+        
+
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 namespace DanCon
 {
@@ -13,32 +14,32 @@ namespace DanCon
         public GameObject playerOne;
         public GameObject playerTwo;
 
-        public KeyCode[] attackChoices;
-
-
-        public void Play(KeyCode playerTwo)
+        public string[] attackChoices ;
+        
+       
+        public void Play(string playerTwo)
         {
 
-            KeyCode playerOne = attackChoices[6];
+            string playerOne = attackChoices[3];
 
             switch (playerTwo)
             {
 
-                case KeyCode.LeftArrow:
+                case "High":
 
                     switch (playerOne)
                     {
-                        case KeyCode.A:
+                        case "High":
                             attackResult.text = "Parry";
                             Debug.Log("Check");
                             break;
 
-                        case KeyCode.S:
+                        case "Mid":
                             GetComponent<DamageCalculator>().HurtPlayerTwo();
                             Debug.Log("Check");
                             break;
 
-                        case KeyCode.D:
+                        case "Low":
                             GetComponent<DamageCalculator>().HurtPlayerOne();
                             Debug.Log("Check");
                             break;
@@ -46,44 +47,44 @@ namespace DanCon
 
                     break;
 
-                case KeyCode.DownArrow:
+                case "Mid":
 
                     switch (playerOne)
                     {
-                        case KeyCode.A:
+                        case "High":
                             GetComponent<DamageCalculator>().HurtPlayerTwo();
                             Debug.Log("Check");
                             break;
 
-                        case KeyCode.S:
+                        case "Mid":
                             attackResult.text = "Parry";
                             Debug.Log("Check");
                             break;
 
-                        case KeyCode.D:
+                        case "Low":
                             GetComponent<DamageCalculator>().HurtPlayerOne();
                             Debug.Log("Check");
                             break;
                     }
                     break;
 
-                case KeyCode.RightArrow:
+                case "Low":
 
                     switch (playerOne)
                     {
-                        case KeyCode.A:
+                        case "Up":
                             GetComponent<DamageCalculator>().HurtPlayerOne();
                             Debug.Log("Check");
 
                             break;
 
-                        case KeyCode.S:
+                        case "Mid":
                             GetComponent<DamageCalculator>().HurtPlayerTwo();
                             Debug.Log("Check");
 
                             break;
 
-                        case KeyCode.D:
+                        case "Low":
                             attackResult.text = "Parry";
                             Debug.Log("Check");
                             break;
