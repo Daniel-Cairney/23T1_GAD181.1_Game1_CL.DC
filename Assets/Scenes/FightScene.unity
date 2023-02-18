@@ -674,7 +674,6 @@ GameObject:
   - component: {fileID: 390381244}
   - component: {fileID: 390381243}
   - component: {fileID: 390381245}
-  - component: {fileID: 390381246}
   m_Layer: 0
   m_Name: CentreStage
   m_TagString: Untagged
@@ -775,25 +774,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &390381246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390381242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01891e92bcb6c0d48bb390571e56f247, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackResult: {fileID: 709971365}
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
-  attackChoices:
-  - 
-  - 
-  - 
 --- !u!1 &493289706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,8 +1748,6 @@ GameObject:
   - component: {fileID: 734714112}
   - component: {fileID: 734714111}
   - component: {fileID: 734714110}
-  - component: {fileID: 734714114}
-  - component: {fileID: 734714113}
   m_Layer: 0
   m_Name: FightZone
   m_TagString: Untagged
@@ -1870,64 +1848,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &734714113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734714109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc1586511618e6945b3546758cb56723, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnEnterTrigger2D:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1562097821}
-        m_TargetAssemblyTypeName: AtkCSTrigger, Assembly-CSharp
-        m_MethodName: TurnOnScript
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnExitTrigger2D:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1562097821}
-        m_TargetAssemblyTypeName: AtkCSTrigger, Assembly-CSharp
-        m_MethodName: TurnOffScript
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &734714114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734714109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cc7de40c4b3e9a409a4d5e521898569, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerOne: {fileID: 1357598369}
-  playerTwo: {fileID: 635432072}
-  playerOneLife: 5
-  playerTwoLife: 5
 --- !u!1 &824374243
 GameObject:
   m_ObjectHideFlags: 0
@@ -3104,12 +3024,9 @@ MonoBehaviour:
   playerOne: {fileID: 1357598369}
   playerTwo: {fileID: 635432072}
   attackChoices:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - High
+  - Mid
+  - Low
 --- !u!114 &1562097821
 MonoBehaviour:
   m_ObjectHideFlags: 0
