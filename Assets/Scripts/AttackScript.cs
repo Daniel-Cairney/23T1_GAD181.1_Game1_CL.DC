@@ -8,74 +8,84 @@ namespace DanCon
 {
     public class AttackScript : MonoBehaviour
     {
-        [SerializeField] private Text attackResult;
+        public Text attackResult;
 
-        [SerializeField] private string playerOne;
-        [SerializeField] private string playerTwo;
+        public GameObject playerOne;
+        public GameObject playerTwo;
 
-        [SerializeField] private string[] attackChoices;
+        public KeyCode[] attackChoices;
 
 
-        public void Play(string playerOne)
+        public void Play(KeyCode playerTwo)
         {
-            string playerTwo = attackChoices[2];
 
-            switch (playerOne)
+            KeyCode playerOne = attackChoices[6];
+
+            switch (playerTwo)
             {
 
-                case "UpAttack":
+                case KeyCode.LeftArrow:
 
-                    switch (playerTwo)
+                    switch (playerOne)
                     {
-                        case "UpAttack":
+                        case KeyCode.A:
                             attackResult.text = "Parry";
+                            Debug.Log("Check");
                             break;
 
-                        case "MidAttack":
+                        case KeyCode.S:
                             GetComponent<DamageCalculator>().HurtPlayerTwo();
+                            Debug.Log("Check");
                             break;
 
-                        case "LowAttack":
+                        case KeyCode.D:
                             GetComponent<DamageCalculator>().HurtPlayerOne();
+                            Debug.Log("Check");
                             break;
                     }
 
                     break;
 
-                case "MidAttack":
+                case KeyCode.DownArrow:
 
-                    switch (playerTwo)
+                    switch (playerOne)
                     {
-                        case "UpAttack":
+                        case KeyCode.A:
                             GetComponent<DamageCalculator>().HurtPlayerTwo();
+                            Debug.Log("Check");
                             break;
 
-                        case "MidAttack":
+                        case KeyCode.S:
                             attackResult.text = "Parry";
+                            Debug.Log("Check");
                             break;
 
-                        case "LowAttack":
+                        case KeyCode.D:
                             GetComponent<DamageCalculator>().HurtPlayerOne();
+                            Debug.Log("Check");
                             break;
                     }
                     break;
 
-                case "LowAttack":
+                case KeyCode.RightArrow:
 
-                    switch (playerTwo)
+                    switch (playerOne)
                     {
-                        case "UpAttack":
+                        case KeyCode.A:
                             GetComponent<DamageCalculator>().HurtPlayerOne();
+                            Debug.Log("Check");
 
                             break;
 
-                        case "MidAttack":
+                        case KeyCode.S:
                             GetComponent<DamageCalculator>().HurtPlayerTwo();
+                            Debug.Log("Check");
 
                             break;
 
-                        case "LowAttack":
+                        case KeyCode.D:
                             attackResult.text = "Parry";
+                            Debug.Log("Check");
                             break;
                     }
                     break;
