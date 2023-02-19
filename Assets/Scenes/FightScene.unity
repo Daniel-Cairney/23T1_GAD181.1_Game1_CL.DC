@@ -1798,7 +1798,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &734714110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3065,8 +3065,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOne: {fileID: 1357598369}
   playerTwo: {fileID: 635432072}
-  playerOneLife: 5
-  playerTwoLife: 5
+  playerOneLife: 500
+  playerTwoLife: 500
 --- !u!114 &1562097823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3079,7 +3079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfffa8e65ed067e4e86d7e89e0ddfbf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parryResult: {fileID: 0}
+  parryResult: {fileID: 709971365}
   playerOne: {fileID: 0}
   playerTwo: {fileID: 0}
 --- !u!1 &1793536549
