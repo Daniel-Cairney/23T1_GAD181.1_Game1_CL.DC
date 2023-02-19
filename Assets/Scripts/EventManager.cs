@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using Unity.VisualScripting;
 
 public class EventManager : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class EventManager : MonoBehaviour
     [SerializeField] private Button button4;
     [SerializeField] private Button button5;
     [SerializeField] private Button button6;
-    
+
 
 
     // Start is called before the first frame update
@@ -42,39 +43,39 @@ public class EventManager : MonoBehaviour
     {
         if (Input.GetKeyDown(keyCode1))
         {
-            TaskOnClick1();
+            button1.onClick.Invoke();
         }
 
         if(Input.GetKeyDown(keyCode2))
         {
-            TaskOnClick2();
+            button2.onClick.Invoke();
         }   
 
         if( Input.GetKeyDown(keyCode3))
         {
-            TaskOnClick3();
+            button3.onClick.Invoke();
         }
 
-        if(Input.GetKeyDown(keyCode4))
+        if (Input.GetKeyDown(keyCode4))
         {
-            TaskOnClick4();
+            button4.onClick.Invoke();
         }
 
-        if(Input.GetKeyDown(keyCode5))
+        if (Input.GetKeyDown(keyCode5))
         {
-            TaskOnClick5();
+            button5.onClick.Invoke();
         }
 
         if (Input.GetKeyDown(keyCode6))
         {
-            TaskOnClick6();
+            button6.onClick.Invoke();
         }
 
     }
 
     void TaskOnClick1()
     {
-        Debug.Log("You have clicked the button 1");
+        
     }
     void TaskOnClick2()
     {

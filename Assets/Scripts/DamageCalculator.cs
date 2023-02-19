@@ -32,12 +32,13 @@ namespace DanCon
         // 
         public void HurtPlayerOne()
         {
-            playerOneLife--;
+            playerOneLife -=1;
+
         }
 
         public void HurtPlayerTwo()
         { 
-            playerTwoLife--;
+            playerTwoLife -=1;
         }
 
     }

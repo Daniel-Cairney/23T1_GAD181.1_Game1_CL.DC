@@ -8,23 +8,38 @@ public class AtkCSTrigger : MonoBehaviour
 
     private Collider2D _collider;
 
-    public void TurnOnScript()
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (gameObject.CompareTag("PlayerOne") && gameObject.CompareTag("PlayerTwo"))
+
+        {
+            TurnOnScript();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (gameObject.CompareTag("PlayerOne") && gameObject.CompareTag("PlayerTwo"))
         {
-            AttackScript myScript = _collider.gameObject.GetComponent<AttackScript>();
-            myScript.enabled = true;
+            TurnOffScript();
         }
+    }
+
+    public void TurnOnScript()
+    {
+       
+            NewAttackScript myScript = _collider.gameObject.GetComponent<NewAttackScript>();
+            myScript.enabled = true;
+        
     }
 
 
     public void TurnOffScript()
     {
-        if (gameObject.CompareTag("PlayerOne") && gameObject.CompareTag("PlayerTwo"))
-        {
-            AttackScript myScript = _collider.gameObject.GetComponent<AttackScript>();
+        
+            NewAttackScript myScript = _collider.gameObject.GetComponent<NewAttackScript>();
             myScript.enabled = false;
-        }
+        
     }
         
 

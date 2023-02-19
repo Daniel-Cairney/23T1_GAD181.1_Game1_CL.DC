@@ -332,16 +332,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1562097820}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DanCon.AttackScript, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: PlayTwo
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: High
+          m_StringArgument: HighTwo
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &227904062
@@ -413,12 +413,12 @@ GameObject:
   m_Component:
   - component: {fileID: 273889685}
   m_Layer: 5
-  m_Name: FightButtons
+  m_Name: FightButtons (Unused)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &273889685
 RectTransform:
   m_ObjectHideFlags: 0
@@ -508,9 +508,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1562097820}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DanCon.AttackScript, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: PlayOne
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -837,16 +837,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1562097820}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DanCon.AttackScript, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: PlayTwo
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Low
+          m_StringArgument: LowTwo
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &493289708
@@ -1523,6 +1523,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681118846}
   m_CullTransparentMesh: 1
+--- !u!1 &689502423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 689502425}
+  - component: {fileID: 689502424}
+  m_Layer: 0
+  m_Name: DebugTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &689502424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689502423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb75203a2dcfa64f969d212ace1c37c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &689502425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689502423}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.47466254, y: -0.13185182, z: -0.057084307}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &709971363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,6 +1792,7 @@ GameObject:
   - component: {fileID: 734714112}
   - component: {fileID: 734714111}
   - component: {fileID: 734714110}
+  - component: {fileID: 734714114}
   m_Layer: 0
   m_Name: FightZone
   m_TagString: Untagged
@@ -1848,6 +1893,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &734714114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734714109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfffa8e65ed067e4e86d7e89e0ddfbf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parryResult: {fileID: 709971365}
+  playerOne: {fileID: 1357598369}
+  playerTwo: {fileID: 635432072}
 --- !u!1 &824374243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,9 +2553,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1562097820}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DanCon.AttackScript, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: PlayOne
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2632,16 +2692,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1562097820}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DanCon.AttackScript, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: PlayTwo
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Mid
+          m_StringArgument: MidTwo
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1463082900
@@ -2983,8 +3043,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1562097818}
-  - component: {fileID: 1562097820}
-  - component: {fileID: 1562097821}
   - component: {fileID: 1562097822}
   m_Layer: 0
   m_Name: FightManager
@@ -3008,37 +3066,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1562097820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562097816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01891e92bcb6c0d48bb390571e56f247, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackResult: {fileID: 709971365}
-  playerOne: {fileID: 1357598369}
-  playerTwo: {fileID: 635432072}
-  attackChoices:
-  - High
-  - Mid
-  - Low
---- !u!114 &1562097821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562097816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fbfe547d0de0794ea4449b3c7fab64d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1562097822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3048,21 +3075,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1562097816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53066604688d8234493e6458c1cedffc, type: 3}
+  m_Script: {fileID: 11500000, guid: 2cc7de40c4b3e9a409a4d5e521898569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyCode1: 97
-  keyCode2: 115
-  keyCode3: 100
-  keyCode4: 276
-  keyCode5: 274
-  keyCode6: 275
-  button1: {fileID: 306883072}
-  button2: {fileID: 2126968904}
-  button3: {fileID: 1344491551}
-  button4: {fileID: 227904061}
-  button5: {fileID: 1421199706}
-  button6: {fileID: 493289707}
+  playerOne: {fileID: 1357598369}
+  playerTwo: {fileID: 635432072}
+  playerOneLife: 5
+  playerTwoLife: 5
 --- !u!1 &1793536549
 GameObject:
   m_ObjectHideFlags: 0
@@ -3558,9 +3577,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1562097820}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DanCon.AttackScript, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: PlayOne
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

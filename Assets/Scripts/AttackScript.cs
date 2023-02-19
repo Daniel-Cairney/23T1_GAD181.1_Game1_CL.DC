@@ -14,78 +14,72 @@ namespace DanCon
         public GameObject playerOne;
         public GameObject playerTwo;
 
-        public string[] attackChoices ;
         
+        public string[] attackChoices ;
+        public string[] playerChoices ;
        
-        public void Play(string playerTwo)
+        public void PlayTwo(string playerTwo)
         {
-
-            string playerOne = attackChoices[3];
+            
+            string playerOne = attackChoices[0];
+            
 
             switch (playerTwo)
             {
 
-                case "High":
-
+                case "HighTwo":
+                    
                     switch (playerOne)
                     {
                         case "High":
-                            attackResult.text = "Parry";
-                            Debug.Log("Check");
+                            
+                            Debug.Log("You also pressed high");
                             break;
 
                         case "Mid":
-                            GetComponent<DamageCalculator>().HurtPlayerTwo();
                             Debug.Log("Check");
                             break;
 
                         case "Low":
-                            GetComponent<DamageCalculator>().HurtPlayerOne();
                             Debug.Log("Check");
                             break;
                     }
-
+                    Debug.Log("You pressed HIGHTWO");
                     break;
 
-                case "Mid":
+                case "MidTwo":
 
                     switch (playerOne)
                     {
                         case "High":
-                            GetComponent<DamageCalculator>().HurtPlayerTwo();
                             Debug.Log("Check");
                             break;
 
                         case "Mid":
-                            attackResult.text = "Parry";
                             Debug.Log("Check");
                             break;
 
                         case "Low":
-                            GetComponent<DamageCalculator>().HurtPlayerOne();
                             Debug.Log("Check");
                             break;
                     }
                     break;
 
-                case "Low":
+                case "LowTwo":
 
                     switch (playerOne)
                     {
                         case "Up":
-                            GetComponent<DamageCalculator>().HurtPlayerOne();
                             Debug.Log("Check");
 
                             break;
 
                         case "Mid":
-                            GetComponent<DamageCalculator>().HurtPlayerTwo();
                             Debug.Log("Check");
 
                             break;
 
                         case "Low":
-                            attackResult.text = "Parry";
                             Debug.Log("Check");
                             break;
                     }
@@ -95,6 +89,77 @@ namespace DanCon
 
         }
 
+        public void PlayOne(string playerOne)
+        {
+
+            string playerTwo = playerChoices[0];
+
+
+            switch (playerOne)
+            {
+
+
+                case "High":
+
+                    switch (playerTwo)
+                    {
+                        case "HighTwo":
+
+                            Debug.Log("You also pressed high");
+                            break;
+
+                        case "MidTwo":
+                            Debug.Log("Check");
+                            break;
+
+                        case "LowTwo":
+                            Debug.Log("Check");
+                            break;
+                    }
+                    Debug.Log("friends");
+                    break;
+
+                case "Mid":
+
+                    switch (playerTwo)
+                    {
+                        case "HighTwo":
+                            Debug.Log("Check");
+                            break;
+
+                        case "MidTwo":
+                            Debug.Log("Check");
+                            break;
+
+                        case "LowTwo":
+                            Debug.Log("Check");
+                            break;
+                    }
+                    break;
+
+                case "Low":
+
+                    switch (playerTwo)
+                    {
+                        case "UpTwo":
+                            Debug.Log("Check");
+
+                            break;
+
+                        case "MidTwo":
+                            Debug.Log("Check");
+
+                            break;
+
+                        case "LowTwo":
+                            Debug.Log("Check");
+                            break;
+                    }
+                    break;
+
+            }
+
+        }
     }
 }
 
