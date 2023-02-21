@@ -37,7 +37,10 @@ namespace DanCon
             SceneManager.LoadScene("Tutorial2");
         }
 
-    
+        public void ObjectiveTutorial()
+        {
+            SceneManager.LoadScene("ObjectiveTutorial");
+        }
     }
 
 }
