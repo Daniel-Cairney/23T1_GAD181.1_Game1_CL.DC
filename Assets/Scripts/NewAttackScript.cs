@@ -18,14 +18,19 @@ namespace DanCon
 
         void Update()
         {
+            // bbbbbb = Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W); boolean to represent the if statements
+
             if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
             {
+                // debug.log everywhere jhjh
                 if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.UpArrow))
                 {
+                    
                     parryResult.text = "Parry";
                 }
                 else if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.UpArrow))
                 {
+                    
                     GetComponent<DamageCalculator>().HurtPlayerTwo();
                 }
                 else if (Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.UpArrow))
