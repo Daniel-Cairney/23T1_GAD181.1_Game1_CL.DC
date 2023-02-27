@@ -54,11 +54,23 @@ namespace DanCon
         public void MidAttack()
         {
             animator.SetTrigger("Mid Attack");
+
+            Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
+            foreach (Collider2D player in hitPlayers)
+            {
+                Debug.Log("Hit Mid AttacK");
+            }
         }
 
         public void DownAttack()
         {
             animator.SetTrigger("Down Attack");
+
+            Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
+            foreach (Collider2D player in hitPlayers)
+            {
+                Debug.Log("Hit Down AttacK");
+            }
         }
 
         private void OnDrawGizmosSelected()
