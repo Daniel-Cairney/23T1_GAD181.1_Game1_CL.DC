@@ -15,6 +15,7 @@ namespace DanCon
         [SerializeField] private Transform attackPoint;
         [SerializeField] private float attackRange = 1f;
         [SerializeField] private LayerMask playerLayers;
+        [SerializeField] private int attackDamage = 40;
 
 
 
@@ -46,7 +47,7 @@ namespace DanCon
             Collider2D[]hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
             foreach (Collider2D player in hitPlayers)
             {
-                Debug.Log("Hit Up AttacK");
+                player.GetComponent<DamageCalculator>().HurtPlayerTwo(attackDamage);
             }
 
         }
@@ -58,7 +59,7 @@ namespace DanCon
             Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
             foreach (Collider2D player in hitPlayers)
             {
-                Debug.Log("Hit Mid AttacK");
+                player.GetComponent<DamageCalculator>().HurtPlayerTwo(attackDamage);
             }
         }
 
@@ -69,7 +70,7 @@ namespace DanCon
             Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
             foreach (Collider2D player in hitPlayers)
             {
-                Debug.Log("Hit Down AttacK");
+                player.GetComponent<DamageCalculator>().HurtPlayerTwo(attackDamage);
             }
         }
 

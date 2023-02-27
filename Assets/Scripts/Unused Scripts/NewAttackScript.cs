@@ -10,7 +10,7 @@ namespace DanCon
 
     public class NewAttackScript : MonoBehaviour
     {
-        public Text parryResult;
+        /*public Text parryResult;
 
         [SerializeField] private GameObject playerOne;
         [SerializeField] private GameObject playerTwo;
@@ -72,6 +72,6 @@ namespace DanCon
             }
 
 
-        }
+        }*/
     }
 }

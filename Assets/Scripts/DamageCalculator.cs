@@ -12,17 +12,19 @@ namespace DanCon
         [SerializeField] private GameObject playerOne;
         [SerializeField] private GameObject playerTwo;
 
-        [SerializeField] private int playerOneLife;
-        [SerializeField] private int playerTwoLife;
+
+        [SerializeField] private int playerTwoMaxLife = 100;
+        int playerTwoCurrentLife;
+
+        private void Start()
+        {
+            playerTwoCurrentLife = playerTwoMaxLife;
+        }
 
         public void Update()
         {
-            if (playerOneLife <= 0)
-            {
-                playerOne.SetActive(false);
-            }
-
-            if (playerTwoLife <= 0)
+   
+            if (playerTwoCurrentLife <= 0)
             {
                 playerTwo.SetActive(false);
             }
@@ -30,16 +32,22 @@ namespace DanCon
         }
         // these must be public so they can be referenced in the attack script
         // 
-        public void HurtPlayerOne()
+
+
+        public void HurtPlayerTwo(int damage)
         {
-            playerOneLife -=1;
-
+            playerTwoMaxLife -= damage;
+        
+            if(playerTwoCurrentLife <= 0)
+            {
+                Die();
+            }
+        
         }
 
-        public void HurtPlayerTwo()
-        { 
-            playerTwoLife -=1;
+        public void Die()
+        {
+            Debug.Log("Player two has died");
         }
-
     }
 }
