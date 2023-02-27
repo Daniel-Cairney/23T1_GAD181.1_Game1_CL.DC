@@ -21,20 +21,37 @@ namespace DanCon
 
         private void Update()
         { //calls the methods below 
-            if (Input.GetKeyDown(KeyCode.RightControl))
+            if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.RightControl))
             {
                 UpAttack();
             }
 
-            if(Input.GetKeyDown(KeyCode.UpArrow))
+            if(gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.UpArrow))
             {
                 MidAttack();
             }
 
-            if(Input.GetKeyDown(KeyCode.DownArrow))
+            if(gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.DownArrow))
             {
                 DownAttack();
             }
+
+            if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.Space))
+            {
+                UpAttackTwo();
+            }
+
+            if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.W))
+            {
+                MidAttackTwo();
+            }
+
+            if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.S))
+            {
+                DownAttackTwo();
+            }
+
+
         }
 
         public void UpAttack()
@@ -74,6 +91,42 @@ namespace DanCon
             }
         }
 
+        public void UpAttackTwo()
+        {
+            // plays the animation set to the button input
+            animator.SetTrigger("Up Attack");
+
+            // checks if the players attack position has hit a Player on a particular Layer
+
+            Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
+            foreach (Collider2D player in hitPlayers)
+            {
+                player.GetComponent<DamageCalculator>().HurtPlayerOne(attackDamage);
+            }
+
+        }
+
+        public void MidAttackTwo()
+        {
+            animator.SetTrigger("Mid Attack");
+
+            Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
+            foreach (Collider2D player in hitPlayers)
+            {
+                player.GetComponent<DamageCalculator>().HurtPlayerOne(attackDamage);
+            }
+        }
+
+        public void DownAttackTwo()
+        {
+            animator.SetTrigger("Down Attack");
+
+            Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
+            foreach (Collider2D player in hitPlayers)
+            {
+                player.GetComponent<DamageCalculator>().HurtPlayerOne(attackDamage);
+            }
+        }
         private void OnDrawGizmosSelected()
         { // used to visualise the attack point in the editor - otherwise you can't see it
 

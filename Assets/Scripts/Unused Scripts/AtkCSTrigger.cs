@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AtkCSTrigger : MonoBehaviour
 {
-
+/*
     private Collider2D _collider;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -42,5 +42,5 @@ public class AtkCSTrigger : MonoBehaviour
         
     }
         
-
+    */
 }
