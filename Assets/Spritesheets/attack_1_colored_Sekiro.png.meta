@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+guid: 4976ff89ffeb19344af37216df3581bb
+=======
 guid: d87e9050c5016164dbdee13ba19a7091
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +107,248 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+<<<<<<< Updated upstream
+      name: ArtStation - Explore_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca74155671745c4499a5f5392b543410
+      internalID: 262888076
+=======
+      name: attack_1_colored_Sekiro_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -24}
+        - {x: 18.5, y: 0}
+        - {x: 0, y: 24}
+        - {x: -18.5, y: 0}
+      physicsShape:
+      - - {x: 0, y: -24}
+        - {x: 18.5, y: 0}
+        - {x: 0, y: 24}
+        - {x: -18.5, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bace0d563e6aa642a97737efc8117ef
+      internalID: 1276216286
+>>>>>>> Stashed changes
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<< Updated upstream
+      name: ArtStation - Explore_1
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 1451
+        width: 468
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 16, w: 9}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9661d6782ff9f48b6406969c14001b
+      internalID: 1768383135
+=======
+      name: attack_1_colored_Sekiro_2
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -24}
+        - {x: 18.5, y: 0}
+        - {x: 0, y: 24}
+        - {x: -18.5, y: 0}
+      physicsShape:
+      - - {x: 0, y: -24}
+        - {x: 18.5, y: 0}
+        - {x: 0, y: 24}
+        - {x: -18.5, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d478541c8a60344b504c6a4936c496
+      internalID: 952901544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_1_colored_Sekiro_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -24}
+        - {x: 18.5, y: 0}
+        - {x: 0, y: 24}
+        - {x: -18.5, y: 0}
+      physicsShape:
+      - - {x: 0, y: -24}
+        - {x: 18.5, y: 0}
+        - {x: 0, y: 24}
+        - {x: -18.5, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8fb06d5929f914d95e54ce807496f1
+      internalID: 1881796410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_1_colored_Sekiro_4
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 0
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -24}
+        - {x: 18.5, y: 0}
+        - {x: 0, y: 24}
+        - {x: -18.5, y: 0}
+      physicsShape:
+      - - {x: 0, y: -24}
+        - {x: 18.5, y: 0}
+        - {x: 0, y: 24}
+        - {x: -18.5, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ee22f8b24db664eba41c02c61929d9
+      internalID: -16535662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_1_colored_Sekiro_5
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 0
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -24}
+        - {x: 18.5, y: 0}
+        - {x: 0, y: 24}
+        - {x: -18.5, y: 0}
+      physicsShape:
+      - - {x: 0, y: -24}
+        - {x: 18.5, y: 0}
+        - {x: 0, y: 24}
+        - {x: -18.5, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb37e659a8d475d40b916e7511284a65
+      internalID: -1942388032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_1_colored_Sekiro_7
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 0
+        width: 39
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -24}
+        - {x: 18.5, y: 0}
+        - {x: 0, y: 24}
+        - {x: -18.5, y: 0}
+      physicsShape:
+      - - {x: 0, y: -24}
+        - {x: 18.5, y: 0}
+        - {x: 0, y: 24}
+        - {x: -18.5, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5241c34b288b7154e81fa66b68899f24
+      internalID: 251690227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_1_colored_Sekiro_8
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 0
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -24}
+        - {x: 18.5, y: 0}
+        - {x: 0, y: 24}
+        - {x: -18.5, y: 0}
+      physicsShape:
+      - - {x: 0, y: -24}
+        - {x: 18.5, y: 0}
+        - {x: 0, y: 24}
+        - {x: -18.5, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d07aecdb2a78c940a6a930ad853f083
+      internalID: -650734806
+>>>>>>> Stashed changes
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +359,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+<<<<<<< Updated upstream
+      ArtStation - Explore_1: -795287538
+      ArtStation - Explore_0: 262888076
+=======
+      attack_1_colored_Sekiro_8: -650734806
+      attack_1_colored_Sekiro_7: 251690227
+      attack_1_colored_Sekiro_1: -854527343
+      attack_1_colored_Sekiro_5: -1942388032
+      attack_1_colored_Sekiro_0: 1276216286
+      attack_1_colored_Sekiro_6: 1408548856
+      attack_1_colored_Sekiro_2: 952901544
+      attack_1_colored_Sekiro_3: 1881796410
+      attack_1_colored_Sekiro_4: -16535662
+>>>>>>> Stashed changes
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

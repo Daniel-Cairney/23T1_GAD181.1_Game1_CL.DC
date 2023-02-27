@@ -4,163 +4,90 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 namespace DanCon
 {
+
     public class AttackScript : MonoBehaviour
     {
-        public Text attackResult;
 
-        public GameObject playerOne;
-        public GameObject playerTwo;
+        [SerializeField] private Animator samuraiAnim;
 
-        
-        public string[] attackChoices ;
-        public string[] playerChoices ;
-       
-        public void PlayTwo(string playerTwo)
+        [SerializeField] private Transform attackPoint;
+        [SerializeField] private float attackRange = 0.5f;
+        [SerializeField] private LayerMask playerLayers;
+
+        private void Update()
         {
-            
-            string playerOne = attackChoices[0];
-            
-
-            switch (playerTwo)
+            if (Input.GetKeyDown(KeyCode.RightControl))
             {
+                UpAttack();
+            }
 
-                case "HighTwo":
-                    
-                    switch (playerOne)
-                    {
-                        case "High":
-                            
-                            Debug.Log("You also pressed high");
-                            break;
 
-                        case "Mid":
-                            Debug.Log("Check");
-                            break;
+            void UpAttack()
 
-                        case "Low":
-                            Debug.Log("Check");
-                            break;
-                    }
-                    Debug.Log("You pressed HIGHTWO");
-                    break;
+            {
+                samuraiAnim.SetTrigger("UpAttack");
 
-                case "MidTwo":
+                Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
 
-                    switch (playerOne)
-                    {
-                        case "High":
-                            Debug.Log("Check");
-                            break;
+                foreach (Collider2D player in hitPlayer)
+                {
+                    Debug.Log("HitHim");
+                }
+            }
 
-                        case "Mid":
-                            Debug.Log("Check");
-                            break;
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                MidAttack();
+            }
 
-                        case "Low":
-                            Debug.Log("Check");
-                            break;
-                    }
-                    break;
 
-                case "LowTwo":
+            void MidAttack()
 
-                    switch (playerOne)
-                    {
-                        case "Up":
-                            Debug.Log("Check");
+            {
+                samuraiAnim.SetTrigger("MidAttack");
 
-                            break;
+                Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
 
-                        case "Mid":
-                            Debug.Log("Check");
+                foreach (Collider2D player in hitPlayer)
+                {
+                    Debug.Log("HitHim");
+                }
+            }
 
-                            break;
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                DownAttack();
+            }
 
-                        case "Low":
-                            Debug.Log("Check");
-                            break;
-                    }
-                    break;
 
+            void DownAttack()
+
+            {
+                samuraiAnim.SetTrigger("DownAttack");
+
+                Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
+
+                foreach (Collider2D player in hitPlayer)
+                {
+                    Debug.Log("HitHim");
+                }
             }
 
         }
 
-        public void PlayOne(string playerOne)
+        public void OnDrawGizmosSelected()
         {
+            if (attackPoint == null)
+                return;
 
-            string playerTwo = playerChoices[0];
-
-
-            switch (playerOne)
-            {
-
-
-                case "High":
-
-                    switch (playerTwo)
-                    {
-                        case "HighTwo":
-
-                            Debug.Log("You also pressed high");
-                            break;
-
-                        case "MidTwo":
-                            Debug.Log("Check");
-                            break;
-
-                        case "LowTwo":
-                            Debug.Log("Check");
-                            break;
-                    }
-                    Debug.Log("friends");
-                    break;
-
-                case "Mid":
-
-                    switch (playerTwo)
-                    {
-                        case "HighTwo":
-                            Debug.Log("Check");
-                            break;
-
-                        case "MidTwo":
-                            Debug.Log("Check");
-                            break;
-
-                        case "LowTwo":
-                            Debug.Log("Check");
-                            break;
-                    }
-                    break;
-
-                case "Low":
-
-                    switch (playerTwo)
-                    {
-                        case "UpTwo":
-                            Debug.Log("Check");
-
-                            break;
-
-                        case "MidTwo":
-                            Debug.Log("Check");
-
-                            break;
-
-                        case "LowTwo":
-                            Debug.Log("Check");
-                            break;
-                    }
-                    break;
-
-            }
-
+            Gizmos.DrawWireSphere(attackPoint.position, attackRange);
         }
     }
+
 }
 
 

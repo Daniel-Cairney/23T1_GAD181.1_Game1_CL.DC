@@ -9,21 +9,25 @@ namespace DanCon
 
     public class PlayerMovement : MonoBehaviour
     {
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 
         public Sprite SamuraiPlaceholder_0, SamuraiPlaceholder_1, SamuraiPlaceholder_2, SamuraiPlaceholder_3;
+>>>>>>> f5a88b8f82138dd490109fd0991ad7463f19acea
 
-
-        [SerializeField] private float movementSpeed;
-
-        private Rigidbody2D theRB2D;
-     
         // these allow us to decide which keys allow for movement in the inspector
+        private KeyCode keyCode;
 
-        [SerializeField] private KeyCode stepRight;
-        [SerializeField] private KeyCode stepLeft;
-        [SerializeField] private KeyCode upAttack;
-        [SerializeField] private KeyCode midAttack;
-        [SerializeField] private KeyCode downAttack;
+        Vector2 movementRun;
+        [SerializeField] Animator samuraiAnim;
+        [SerializeField] private float movementSpeed;
+        [SerializeField] private Rigidbody2D theRB2D;
+ 
+
+
 
         private void Start()
         {
@@ -34,23 +38,19 @@ namespace DanCon
         // if they let go of the key, they move back
         // player tag MAY not be necesary here, but might be relevant if we make changes in the future
         private void Update()
-         {
-                        
-            if (gameObject.CompareTag("PlayerOne"))
+        {
+
+            movementRun.x = Input.GetAxisRaw("Horizontal");
+
+<<<<<<< HEAD
+            samuraiAnim.SetFloat("Horizontal", movementRun.x);
+            samuraiAnim.SetFloat("Speed", movementRun.sqrMagnitude);
+=======
             {
-                
-                if (Input.GetKeyDown(stepRight))
-                {
-                    theRB2D.velocity = new Vector2(movementSpeed, theRB2D.velocity.y);
-                }
-                else if (Input.GetKeyUp(stepRight))
-                {
-                    theRB2D.velocity = new Vector2(-movementSpeed, theRB2D.velocity.y);
-                }
-            }
 
-            if (gameObject.CompareTag("PlayerOne"))
+>>>>>>> f5a88b8f82138dd490109fd0991ad7463f19acea
 
+<<<<<<< Updated upstream
             {
 
 
@@ -58,7 +58,16 @@ namespace DanCon
                     {   // animation plays when A is pressed - but won't play again
                         GetComponent<SpriteRenderer>().sprite = SamuraiPlaceholder_3;
                     }
+=======
+ 
+>>>>>>> Stashed changes
 
+<<<<<<< HEAD
+        }
+        private void FixedUpdate()
+        {
+            theRB2D.MovePosition(theRB2D.position + movementRun * movementSpeed * Time.deltaTime);
+=======
                     else if (Input.GetKeyDown(midAttack))
                     {
                         GetComponent<SpriteRenderer>().sprite = SamuraiPlaceholder_2;
@@ -114,8 +123,10 @@ namespace DanCon
                
 
             }
+>>>>>>> f5a88b8f82138dd490109fd0991ad7463f19acea
         }
 
  
+
     }
 }
