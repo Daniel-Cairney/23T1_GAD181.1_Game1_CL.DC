@@ -22,6 +22,7 @@ namespace DanCon
         private void Start()
         {
             samuraiRB = GetComponent<Rigidbody2D>();
+            samuraiAnim = GetComponent<Animator>();
         }
 
         private void Update()
@@ -39,7 +40,23 @@ namespace DanCon
             {
                 samuraiRB.velocity = new Vector2(0, samuraiRB.velocity.y);
             }
+
+            if (samuraiRB.velocity.x < 0)
+            {
+                transform.localScale = new Vector3(-7, 7, 7);
+            }
+
+            else if(samuraiRB.velocity.x >0)
+            {
+                transform.localScale = new Vector3(7, 7, 7);
+
+            }
+
+            samuraiAnim.SetFloat("Speed", Mathf.Abs(samuraiRB.velocity.x)); 
+
+
         }
+
 
     }
 }
