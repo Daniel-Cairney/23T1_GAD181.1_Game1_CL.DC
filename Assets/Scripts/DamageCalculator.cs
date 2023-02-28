@@ -9,6 +9,8 @@ namespace DanCon
     public class DamageCalculator : MonoBehaviour
     {
 
+        public GameObject gameOver;
+
         public GameObject playerOne;
         public GameObject playerTwo;
 
@@ -27,12 +29,15 @@ namespace DanCon
             if (playerTwoMaxLife <= 0)
             {
                 playerTwo.SetActive(false);
+                gameOver.SetActive(true);
 
             }
 
             if (playerOneMaxLife <= 0)
             {
                 playerOne.SetActive(false);
+                gameOver.SetActive(true);
+
             }
 
         }
