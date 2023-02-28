@@ -1162,8 +1162,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612002299}
   m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.45, y: -1.1349169, z: 0}
-  m_LocalScale: {x: 0.0058710184, y: -1.685854, z: 1}
+  m_LocalPosition: {x: 0.42603, y: -1.142, z: 0}
+  m_LocalScale: {x: 0.040209785, y: -1.685854, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1793536551}
@@ -1278,7 +1278,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &672510674
 GameObject:
@@ -2356,7 +2356,7 @@ Transform:
   - {fileID: 1544558066}
   - {fileID: 2144868909}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &945867975
 PrefabInstance:
@@ -2365,9 +2365,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1924588342510616087, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: playerLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924588344000931892, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: left
+      value: 97
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924588344000931892, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: right
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1924588344000931893, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1924588344000931893, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: m_LocalScale.x
@@ -2429,9 +2441,25 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1924588344000931896, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: m_Size.x
+      value: 0.18600751
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924588344000931896, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.026996247
+      objectReference: {fileID: 0}
     - target: {fileID: 1924588344000931897, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: m_Name
-      value: Player One 1
+      value: Player Two
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924588344000931897, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924588344000931897, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: m_TagString
+      value: PlayerTwo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
@@ -2577,7 +2605,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1185838989
 PrefabInstance:
@@ -2588,7 +2616,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 599274343210658329, guid: ab7b3de7729437b4d967bd41b5c3a635, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 599274343210658329, guid: ab7b3de7729437b4d967bd41b5c3a635, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3008,8 +3036,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463082900}
   m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.45, y: -1.135, z: 0}
-  m_LocalScale: {x: 0.0058710184, y: -1.685854, z: 1}
+  m_LocalPosition: {x: -0.45859, y: -1.135, z: 0}
+  m_LocalScale: {x: 0.03314037, y: -1.685854, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1793536551}
@@ -3351,7 +3379,7 @@ Transform:
   - {fileID: 612002302}
   - {fileID: 1463082903}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1793536552
 BoxCollider2D:
@@ -3392,7 +3420,7 @@ GameObject:
   - component: {fileID: 1831928540}
   - component: {fileID: 1831928539}
   - component: {fileID: 1831928543}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3477,7 +3505,7 @@ RectTransform:
   - {fileID: 273889685}
   - {fileID: 1023058528}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3874,7 +3902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1924588344000931893, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1924588344000931893, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3928,9 +3956,21 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1924588344000931896, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: m_Size.x
+      value: 0.1860075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924588344000931896, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.026996255
+      objectReference: {fileID: 0}
     - target: {fileID: 1924588344000931897, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: m_Name
       value: Player One
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924588344000931897, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
