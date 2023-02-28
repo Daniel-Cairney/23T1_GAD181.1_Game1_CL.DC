@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace DanCon
 {
@@ -9,7 +10,6 @@ namespace DanCon
     public class DamageCalculator : MonoBehaviour
     {
 
-        public GameObject gameOver;
 
         public GameObject playerOne;
         public GameObject playerTwo;
@@ -29,14 +29,14 @@ namespace DanCon
             if (playerTwoMaxLife <= 0)
             {
                 playerTwo.SetActive(false);
-                gameOver.SetActive(true);
+                SceneManager.LoadScene("GameOverScreen");
 
             }
 
             if (playerOneMaxLife <= 0)
             {
                 playerOne.SetActive(false);
-                gameOver.SetActive(true);
+                SceneManager.LoadScene("GameOverScreen");
 
             }
 
