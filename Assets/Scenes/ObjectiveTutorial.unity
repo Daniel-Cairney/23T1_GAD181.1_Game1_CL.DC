@@ -623,21 +623,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Two samurai are sent on a mission to find each other and eleminate their
-    oppentent to resore their honour.
-
-
-    Using the art of the sword they can switch
-    stances, using the correct stance while in the strinking zone will damage your
-    oppenent.
-
-
-    As the ancient water had tought the samurai:
-
-    High defeats
-    Medium, Meduim defeats Low and Low defeats High stance.
-
-'
+  m_text: "Two samurai are sent on a mission to find each other and eleminate their
+    oppentent to resore their honour.\n\nThe samurai will use all of their sword
+    art knowlegde the defeat the enemy with the 3 types of attacks which are: High,
+    Medium and low \n\nas the samurai were tought, high defeats low, low defeats
+    medium and medium defeats high"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9edd93db03654dd49ae5057587a7d881, type: 2}
   m_sharedMaterial: {fileID: 6904089416973656430, guid: 9edd93db03654dd49ae5057587a7d881, type: 2}

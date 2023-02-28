@@ -618,9 +618,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Controls\n\nPress the A, S, D, key to switch your sword stance \n\nPLayer
-    1\n<`A`> high  <`S`> medium  <`D`>low\nHold <W> to move your samurai into striking
-    range and release it to go back\n"
+  m_text: 'Controls
+
+    Player 1
+
+
+    Use the Right and left arrow keys to move
+
+
+    press
+    <`Right cntl`> to attack high
+
+    press <`up arrow`> to attack medium
+
+    press
+    <`down arrow>` to attack low
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9edd93db03654dd49ae5057587a7d881, type: 2}
   m_sharedMaterial: {fileID: 6904089416973656430, guid: 9edd93db03654dd49ae5057587a7d881, type: 2}
