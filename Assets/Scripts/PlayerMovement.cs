@@ -10,27 +10,36 @@ namespace DanCon
     public class PlayerMovement : MonoBehaviour
     {
 
-        [SerializeField] private float movementSpeed = 5f;
+        [SerializeField] private KeyCode left;
+        [SerializeField] private KeyCode right;
+
+        [SerializeField] private float movementSpeed;
         
         [SerializeField] private Rigidbody2D samuraiRB;
         
         [SerializeField] private Animator samuraiAnim;
-        
-        private Vector2 movement;
+
+        private void Start()
+        {
+            samuraiRB = GetComponent<Rigidbody2D>();
+        }
 
         private void Update()
         {
-            movement.x = Input.GetAxisRaw("Horizontal");
+           if(Input.GetKey(left))
+            {
+                samuraiRB.velocity = new Vector2(-movementSpeed, samuraiRB.velocity.y);
+            }
 
-            samuraiAnim.SetFloat("Horizontal", movement.x);
-            samuraiAnim.SetFloat("Speed", movement.sqrMagnitude);
+           else if(Input.GetKey(right))
+            {
+                samuraiRB.velocity = new Vector2(movementSpeed, samuraiRB.velocity.y);
+            }
+           else
+            {
+                samuraiRB.velocity = new Vector2(0, samuraiRB.velocity.y);
+            }
         }
-
-        private void FixedUpdate()
-        {
-            samuraiRB.MovePosition(samuraiRB.position + movement * movementSpeed * Time.deltaTime);
-        }
-
 
     }
 }
