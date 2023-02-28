@@ -9,8 +9,8 @@ namespace DanCon
 {
     public class AttackScript : MonoBehaviour
     {
-
-
+        public float coolDown = 1f;
+        private float lastAttack = -1f;
 
         [SerializeField] private Animator animator;
 
@@ -27,22 +27,30 @@ namespace DanCon
 
             if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.RightControl))
             {
-                UpAttack();
+                if (Time.time > lastAttack + coolDown)
+                {
+                    UpAttack();
+                    lastAttack = Time.time;
+                }
             }
 
-            if(gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.UpArrow))
+            if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.UpArrow))
             {
                 MidAttack();
             }
 
-            if(gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.DownArrow))
+            if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.DownArrow))
             {
                 DownAttack();
             }
 
             if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.Space))
-            {
-                UpAttackTwo();
+            { 
+                if (Time.time > lastAttack + coolDown)
+                {
+                    UpAttackTwo();
+                    lastAttack = Time.time;
+                }
             }
 
             if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.W))
@@ -54,7 +62,6 @@ namespace DanCon
             {
                 DownAttackTwo();
             }
-
 
 
         }
