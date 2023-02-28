@@ -963,6 +963,29 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1924588344000931897, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
   m_PrefabInstance: {fileID: 1924588343863587007}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &429701505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429701497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc7de40c4b3e9a409a4d5e521898569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerOne: {fileID: 429701497}
+  playerTwo: {fileID: 0}
+  playerTwoMaxLife: 0
+  playerOneMaxLife: 5
+  pOneSword:
+  - {fileID: 1023120191}
+  - {fileID: 2082466470}
+  - {fileID: 521271293}
+  - {fileID: 844595253}
+  - {fileID: 1412600520}
+  pTwoSword: []
 --- !u!1 &493289706
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,6 +2180,29 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1924588344000931897, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
   m_PrefabInstance: {fileID: 945867975}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &769541170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769541161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc7de40c4b3e9a409a4d5e521898569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 769541161}
+  playerTwoMaxLife: 5
+  playerOneMaxLife: 0
+  pOneSword: []
+  pTwoSword:
+  - {fileID: 115084272}
+  - {fileID: 981895613}
+  - {fileID: 227810979}
+  - {fileID: 984180724}
+  - {fileID: 1425867630}
 --- !u!1 &824374243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2706,6 +2752,10 @@ PrefabInstance:
       value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 1924588342510616087, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: attackDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924588342510616087, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: playerLayers.m_Bits
       value: 512
       objectReference: {fileID: 0}
@@ -2723,11 +2773,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1924588344000931893, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: m_LocalScale.x
-      value: -7
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1924588344000931893, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.96
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 1924588344000931893, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2801,7 +2851,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: PlayerTwo
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1924588342510616086, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
 --- !u!1 &981895613
 GameObject:
@@ -4176,6 +4227,7 @@ GameObject:
   - component: {fileID: 1831928540}
   - component: {fileID: 1831928539}
   - component: {fileID: 1831928543}
+  - component: {fileID: 1831928544}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -4291,6 +4343,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1831928544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831928538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc7de40c4b3e9a409a4d5e521898569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerTwoMaxLife: 100
+  playerOneMaxLife: 100
+  pOneSword: []
+  pTwoSword: []
 --- !u!1 &1911617490
 GameObject:
   m_ObjectHideFlags: 0
@@ -4772,6 +4842,10 @@ PrefabInstance:
       propertyPath: playerTwo
       value: 
       objectReference: {fileID: 769541161}
+    - target: {fileID: 1924588342510616087, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: attackDamage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1924588344000931892, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: left
       value: 276
@@ -4785,8 +4859,12 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1924588344000931893, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924588344000931893, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1924588344000931893, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: m_LocalPosition.y

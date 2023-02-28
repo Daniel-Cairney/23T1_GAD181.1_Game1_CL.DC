@@ -9,20 +9,38 @@ namespace DanCon
     public class DamageCalculator : MonoBehaviour
     {
 
-        [SerializeField] private GameObject playerOne;
-        [SerializeField] private GameObject playerTwo;
+        public GameObject playerOne;
+        public GameObject playerTwo;
 
-        [SerializeField] private int playerTwoMaxLife = 100;
-        [SerializeField] private int playerOneMaxLife = 100;
+        public int playerTwoMaxLife = 100;
+        public int playerOneMaxLife = 100;
 
         [SerializeField] private GameObject[] pOneSword;
         [SerializeField] private GameObject[] pTwoSword;
 
 
         // these must be public so they can be referenced in the attack script
-  
+
+        private void Update()
+            // when the players health reaches 0 - the gameobject is turned off
+        {
+            if (playerTwoMaxLife <= 0)
+            {
+                playerTwo.SetActive(false);
+
+            }
+
+            if (playerOneMaxLife <= 0)
+            {
+                playerOne.SetActive(false);
+            }
+
+        }
+
         public void HurtPlayerTwo(int damage)
         {
+            // deducts the damage amount from the player
+            // this amount is set in the inspector
             playerTwoMaxLife -= damage;
 
             for (int i = 0; i < pTwoSword.Length; i++)
@@ -37,15 +55,12 @@ namespace DanCon
                 }
             }
 
-            if(playerTwoMaxLife <= 0)
-            {
-                playerTwo.SetActive(false);
-                
-            }
+
         }
- 
+        
         public void HurtPlayerOne(int damage)
         {
+            // same as above but for the other player
             playerOneMaxLife -= damage;
 
             for (int i = 0; i < pOneSword.Length; i++)
@@ -59,10 +74,7 @@ namespace DanCon
                     pOneSword[i].SetActive(false);
                 }
 
-            if (playerOneMaxLife <= 0)
-            {
-                playerOne.SetActive(false); 
-            }
+
         }
 
     }
