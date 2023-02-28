@@ -45,7 +45,7 @@ namespace DanCon
 
             for (int i = 0; i < pTwoSword.Length; i++)
             {
-                if(playerTwoMaxLife > 1)
+                if(playerTwoMaxLife > i)
                 {
                     pTwoSword[i].SetActive(true);
                 }
@@ -65,7 +65,7 @@ namespace DanCon
 
             for (int i = 0; i < pOneSword.Length; i++)
 
-                if (playerOneMaxLife > 1)
+                if (playerOneMaxLife > i)
                 {
                     pOneSword[i].SetActive(true);
                 }
