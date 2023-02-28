@@ -825,8 +825,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOne: {fileID: 429701497}
   playerTwo: {fileID: 769541161}
-  playerTwoMaxLife: 5
-  playerOneMaxLife: 5
+  playerTwoMaxLife: 6
+  playerOneMaxLife: 6
   pOneSword:
   - {fileID: 1946508947}
   - {fileID: 443273217}
@@ -2313,8 +2313,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOne: {fileID: 429701497}
   playerTwo: {fileID: 769541161}
-  playerTwoMaxLife: 5
-  playerOneMaxLife: 5
+  playerTwoMaxLife: 6
+  playerOneMaxLife: 6
   pOneSword: []
   pTwoSword:
   - {fileID: 512596628}

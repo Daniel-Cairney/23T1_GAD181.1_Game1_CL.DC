@@ -10,6 +10,8 @@ namespace DanCon
     public class AttackScript : MonoBehaviour
     {
 
+
+
         [SerializeField] private Animator animator;
 
         [SerializeField] private Transform attackPoint;
@@ -17,10 +19,12 @@ namespace DanCon
         [SerializeField] private LayerMask playerLayers;
         [SerializeField] private int attackDamage = 40;
 
-
+        private bool isBlocked;
 
         private void Update()
         { //calls the methods below 
+
+
             if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.RightControl))
             {
                 UpAttack();
@@ -52,7 +56,10 @@ namespace DanCon
             }
 
 
+
         }
+
+
 
         public void UpAttack()
         {
