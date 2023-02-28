@@ -43,6 +43,12 @@ namespace DanCon
             // this amount is set in the inspector
             playerTwoMaxLife -= damage;
 
+
+            // this handles the health bar on screen
+            // it checks to see the length of the array, and counts each one in order - if the number of health is less than the number of the total array
+            // it will remove on of the images
+            // the images needed to be arranged backwards in the inspector
+
             for (int i = 0; i < pTwoSword.Length; i++)
             {
                 if(playerTwoMaxLife > i)
