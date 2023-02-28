@@ -25,7 +25,8 @@ namespace DanCon
         { //calls the methods below 
 
 
-            if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.RightControl))
+            if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.Keypad0))
+
             {
                 if (Time.time > lastAttack + coolDown)
                 {
@@ -36,13 +37,19 @@ namespace DanCon
 
             if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.UpArrow))
             {
-                MidAttack();
+                if (Time.time > lastAttack + coolDown)
+                {
+                    MidAttack();
+                }
             }
 
-            if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                DownAttack();
-            }
+                if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.DownArrow))
+                {
+                    if (Time.time > lastAttack + coolDown)
+                    {
+                        DownAttack();
+                    }
+                }
 
             if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.Space))
             { 
@@ -53,16 +60,21 @@ namespace DanCon
                 }
             }
 
-            if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.W))
-            {
-                MidAttackTwo();
-            }
+                    if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.W))
+                    {
+                        if (Time.time > lastAttack + coolDown)
+                        {
+                            MidAttackTwo();
+                        }
+                    }
 
-            if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.S))
-            {
-                DownAttackTwo();
-            }
-
+                        if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.S))
+                        {
+                            if (Time.time > lastAttack + coolDown)
+                            {
+                                DownAttackTwo();
+                            }
+                        }
 
         }
 
