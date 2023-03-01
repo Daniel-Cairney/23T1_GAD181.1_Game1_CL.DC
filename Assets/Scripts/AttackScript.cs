@@ -35,54 +35,13 @@ namespace DanCon
                 }
             }
 
-            if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                if (Time.time > lastAttack + coolDown)
-                {
-                    MidAttack();
-                    lastAttack = Time.time;
-
-                }
-            }
-
-                if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.DownArrow))
-                {
-                    if (Time.time > lastAttack + coolDown)
-                    {
-                        DownAttack();
-                    lastAttack = Time.time;
-
-                }
-            }
-
             if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.Space))
             { 
                 if (Time.time > lastAttack + coolDown)
                 {
                     UpAttackTwo();
                     lastAttack = Time.time;
-                    lastAttack = Time.time;
-
-                }
-            }
-
-                    if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.W))
-                    {
-                        if (Time.time > lastAttack + coolDown)
-                        {
-                            MidAttackTwo();
-                    lastAttack = Time.time;
-
-                }
-            }
-
-                        if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.S))
-                        {
-                            if (Time.time > lastAttack + coolDown)
-                            {
-                                DownAttackTwo();
-                    lastAttack = Time.time;
-
+                    
                 }
             }
 
@@ -105,28 +64,6 @@ namespace DanCon
 
         }
 
-        public void MidAttack()
-        {
-            animator.SetTrigger("Mid Attack");
-
-            Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
-            foreach (Collider2D player in hitPlayers)
-            {
-                player.GetComponent<DamageCalculator>().HurtPlayerTwo(attackDamage);
-            }
-        }
-
-        public void DownAttack()
-        {
-            animator.SetTrigger("Down Attack");
-
-            Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
-            foreach (Collider2D player in hitPlayers)
-            {
-                player.GetComponent<DamageCalculator>().HurtPlayerTwo(attackDamage);
-            }
-        }
-
         public void UpAttackTwo()
         {
             // plays the animation set to the button input
@@ -142,29 +79,11 @@ namespace DanCon
 
         }
 
-        public void MidAttackTwo()
-        {
-            animator.SetTrigger("Mid Attack");
 
-            Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
-            foreach (Collider2D player in hitPlayers)
-            {
-                player.GetComponent<DamageCalculator>().HurtPlayerOne(attackDamage);
-            }
-        }
 
-        public void DownAttackTwo()
-        {
-            animator.SetTrigger("Down Attack");
-
-            Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
-            foreach (Collider2D player in hitPlayers)
-            {
-                player.GetComponent<DamageCalculator>().HurtPlayerOne(attackDamage);
-            }
-        }
         private void OnDrawGizmosSelected()
         { // used to visualise the attack point in the editor - otherwise you can't see it
+            // the circle is just infront of the character 
 
             if (attackPoint == null)
                 return;
