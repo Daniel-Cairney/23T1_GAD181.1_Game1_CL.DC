@@ -40,6 +40,8 @@ namespace DanCon
                 if (Time.time > lastAttack + coolDown)
                 {
                     MidAttack();
+                    lastAttack = Time.time;
+
                 }
             }
 
@@ -48,8 +50,10 @@ namespace DanCon
                     if (Time.time > lastAttack + coolDown)
                     {
                         DownAttack();
-                    }
+                    lastAttack = Time.time;
+
                 }
+            }
 
             if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.Space))
             { 
@@ -57,6 +61,8 @@ namespace DanCon
                 {
                     UpAttackTwo();
                     lastAttack = Time.time;
+                    lastAttack = Time.time;
+
                 }
             }
 
@@ -65,16 +71,20 @@ namespace DanCon
                         if (Time.time > lastAttack + coolDown)
                         {
                             MidAttackTwo();
-                        }
-                    }
+                    lastAttack = Time.time;
+
+                }
+            }
 
                         if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.S))
                         {
                             if (Time.time > lastAttack + coolDown)
                             {
                                 DownAttackTwo();
-                            }
-                        }
+                    lastAttack = Time.time;
+
+                }
+            }
 
         }
 
