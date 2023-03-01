@@ -19,8 +19,6 @@ namespace DanCon
         [SerializeField] private LayerMask playerLayers;
         [SerializeField] private int attackDamage = 40;
 
-        private bool isBlocked;
-
         private void Update()
         { //calls the methods below 
 
@@ -53,13 +51,20 @@ namespace DanCon
         {
             // plays the animation set to the button input
             animator.SetTrigger("Up Attack");
-
+            bool isBlocked = false;
             // checks if the players attack position has hit a Player on a particular Layer
 
             Collider2D[]hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
             foreach (Collider2D player in hitPlayers)
             {
-                player.GetComponent<DamageCalculator>().HurtPlayerTwo(attackDamage);
+                if (isBlocked == true)
+                {
+                    return;
+                }
+                else
+                {
+                    player.GetComponent<DamageCalculator>().HurtPlayerTwo(attackDamage);
+                }
             }
 
         }
@@ -80,8 +85,7 @@ namespace DanCon
         }
 
 
-
-        private void OnDrawGizmosSelected()
+        public void OnDrawGizmosSelected()
         { // used to visualise the attack point in the editor - otherwise you can't see it
             // the circle is just infront of the character 
 
