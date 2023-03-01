@@ -627,12 +627,12 @@ MonoBehaviour:
 
 
     press
-    <`kEYpAD "zERO"`> to attack high
+    <`up arrow`> to attack
 
-    press <`up arrow`> to attack medium
+    press <`keypad zero`> to jump
 
-    press
-    <`down arrow>` to attack low
+    press <`keypad
+    enter`>` to block
 
 '
   m_isRightToLeft: 0

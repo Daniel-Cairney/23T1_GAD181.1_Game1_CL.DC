@@ -623,11 +623,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Two samurai are sent on a mission to find each other and elIminate their
-    oppentent to restore their honour.\n\nThe samurai will use all of their sword
-    art knowledge the defeat the enemy with the 3 types of attacks which are: High,
-    Medium and low \n\nas the samurai were taught, high defeats low, low defeats
-    medium and medium defeats high"
+  m_text: '
+
+    Two samurai are sent on a mission to find each other and elIminate
+    their oppentent to restore their honour
+
+
+    When a samurai gets hit their sword
+    will slowly break
+
+
+    break your opponents sword to win
+
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9edd93db03654dd49ae5057587a7d881, type: 2}
   m_sharedMaterial: {fileID: 6904089416973656430, guid: 9edd93db03654dd49ae5057587a7d881, type: 2}
