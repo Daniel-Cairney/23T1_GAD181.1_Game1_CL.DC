@@ -12,7 +12,7 @@ namespace DanCon
     {
         public float coolDown = 1f;
         private float lastAttack = -1f;
-        private bool isBlocked = false;
+        private bool isBlocked = false; // prevents player from attacking whilst block is held
 
         [SerializeField] private Animator animator;
 
@@ -24,28 +24,42 @@ namespace DanCon
         private void Update()
         { //calls the methods below 
 
-            
+
             // when the player pushes the Period (or Greater Key) they block
             // when they let the key go, theu return to the previous layer 
+
             if (gameObject.CompareTag("PlayerOne") && Input.GetKey(KeyCode.Period))
             {
-                gameObject.layer = LayerMask.NameToLayer("IsBlocked");
-            }
-                else if(gameObject.CompareTag("PlayerOne") && Input.GetKeyUp(KeyCode.Period))
+                if (Time.time > lastAttack + coolDown)
                 {
+                    isBlocked = true;
+                    animator.SetTrigger("Blocking");
+                    gameObject.layer = LayerMask.NameToLayer("IsBlocked");
+                }
+            }
+                else if (gameObject.CompareTag("PlayerOne") && Input.GetKeyUp(KeyCode.Period))
+                {
+                    isBlocked = false;
                     gameObject.layer = LayerMask.NameToLayer("Player1");
                 }
+
             if (gameObject.CompareTag("PlayerTwo") && Input.GetKey(KeyCode.G))
             { // changes the playerlayer to isblocked in the inspector 
-                gameObject.layer = LayerMask.NameToLayer("IsBlocked");
+                if (Time.time > lastAttack + coolDown)
+                {
+                    isBlocked = true;
+                    animator.SetTrigger("Blocking");
+                    gameObject.layer = LayerMask.NameToLayer("IsBlocked");
+                }
             }
                 else if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyUp(KeyCode.G))
                 {
+                    isBlocked = false;
                     gameObject.layer = LayerMask.NameToLayer("Player2");
                 }
 
 
-            if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.Delete))
+            if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.Delete) && isBlocked == false) // changed to delete for testing at home - i don't have a numpad (poor.people.problems)
             {
                 if (Time.time > lastAttack + coolDown)
                 {
@@ -54,7 +68,7 @@ namespace DanCon
                 }
             }
 
-            if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.Space))
+            if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyDown(KeyCode.Space) && isBlocked == false)
             { 
                 if (Time.time > lastAttack + coolDown)
                 {
