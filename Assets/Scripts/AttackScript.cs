@@ -24,12 +24,33 @@ namespace DanCon
         private void Update()
         { //calls the methods below 
 
-            if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.Keypad0))
+            
+            // when the player pushes the Period (or Greater Key) they block
+            // when they let the key go, theu return to the previous layer 
+            if (gameObject.CompareTag("PlayerOne") && Input.GetKey(KeyCode.Period))
+            {
+                gameObject.layer = LayerMask.NameToLayer("IsBlocked");
+            }
+                else if(gameObject.CompareTag("PlayerOne") && Input.GetKeyUp(KeyCode.Period))
+                {
+                    gameObject.layer = LayerMask.NameToLayer("Player1");
+                }
+            if (gameObject.CompareTag("PlayerTwo") && Input.GetKey(KeyCode.G))
+            { // changes the playerlayer to isblocked in the inspector 
+                gameObject.layer = LayerMask.NameToLayer("IsBlocked");
+            }
+                else if (gameObject.CompareTag("PlayerTwo") && Input.GetKeyUp(KeyCode.G))
+                {
+                    gameObject.layer = LayerMask.NameToLayer("Player2");
+                }
+
+
+            if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.Delete))
             {
                 if (Time.time > lastAttack + coolDown)
                 {
                     UpAttack();
-                    lastAttack = Time.time;
+                    lastAttack = Time.time; // the serialzied field above allows us to set the 
                 }
             }
 
@@ -40,18 +61,6 @@ namespace DanCon
                     UpAttackTwo();
                     lastAttack = Time.time;
                 }
-            }
-
-            // when the player pushes the Period (or Greater Key) they block
-            if(gameObject.CompareTag("PlayerOne") && Input.GetKey(KeyCode.Period))
-            {
-                isBlocked = true;
-                Debug.Log("Blocked Cuz");
-            }
-
-            if(gameObject.CompareTag("PlayerTwo") && Input.GetKey(KeyCode.G))
-            { // changes the playerlayer to isblocked in the inspector 
-                gameObject.layer = LayerMask.NameToLayer("IsBlocked");
             }
 
         }
@@ -67,7 +76,6 @@ namespace DanCon
             foreach (Collider2D player in hitPlayers)
             {
                     player.GetComponent<DamageCalculator>().HurtPlayerTwo(attackDamage);
-
             }
         }
 
@@ -85,6 +93,7 @@ namespace DanCon
                 {
                     return;
                 }
+
                 else
                 {
                     player.GetComponent<DamageCalculator>().HurtPlayerOne(attackDamage);
