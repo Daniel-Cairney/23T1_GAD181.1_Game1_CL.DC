@@ -59,7 +59,7 @@ namespace DanCon
                 }
 
 
-            if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.Delete) && isBlocked == false) // changed to delete for testing at home - i don't have a numpad (poor.people.problems)
+            if (gameObject.CompareTag("PlayerOne") && Input.GetKeyDown(KeyCode.Keypad0) && isBlocked == false) // changed to delete for testing at home - i don't have a numpad (poor.people.problems)
             {
                 if (Time.time > lastAttack + coolDown)
                 {

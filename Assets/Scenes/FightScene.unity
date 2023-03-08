@@ -5775,6 +5775,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1924588344000931892, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: movementSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924588344000931892, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: groundCheckPoint
       value: 
       objectReference: {fileID: 486261614}
