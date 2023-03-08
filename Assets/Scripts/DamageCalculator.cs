@@ -10,6 +10,9 @@ namespace DanCon
     public class DamageCalculator : MonoBehaviour
     {
 
+        [SerializeField] private Animator animator;
+        private bool diesOne;
+        private bool diesTwo;
 
         public GameObject playerOne;
         public GameObject playerTwo;
@@ -24,22 +27,32 @@ namespace DanCon
         // these must be public so they can be referenced in the attack script
 
         private void Update()
-            // when the players health reaches 0 - the gameobject is turned off
+            // when the players health reaches 0 - a death animation plays
         {
             if (playerTwoMaxLife <= 0)
             {
-                playerTwo.SetActive(false);
-                SceneManager.LoadScene("GameOverScreen");
-
+                GetComponent<AttackScript>().enabled = false; // turns the scripts off when either player dies to prevent them from continuing to attack
+                diesTwo = true;
             }
+            else diesTwo = false;
 
             if (playerOneMaxLife <= 0)
             {
-                playerOne.SetActive(false);
-                SceneManager.LoadScene("GameOverScreen");
+                GetComponent<AttackScript>().enabled = false;
+                diesOne = true;
+            }
+            else diesOne = false;
 
+
+            if(diesOne == true)
+            {
+                animator.SetBool("Dies", true);
             }
 
+            if(diesTwo == true)
+            {
+                animator.SetBool("Dies", true);
+            }
         }
 
         public void HurtPlayerTwo(int damage)
@@ -86,6 +99,22 @@ namespace DanCon
                 }
 
 
+        }
+        // when one player defeats the other this will be called after the death animation is completed
+        // it checks the player tag and that the life at or less than ZERO and loads the appropriate death screen
+        public void DeathScenes()
+        {
+            if (gameObject.CompareTag("PlayerOne") && playerOneMaxLife <= 0)
+            {
+                
+                SceneManager.LoadScene("GameOverScreen"); //DAN PLEASE ADD IN THE WIN SCREEN FOR PLAYER TWO
+            }
+
+            else if (gameObject.CompareTag("PlayerTwo") && playerTwoMaxLife <= 0)
+            {
+                
+                SceneManager.LoadScene("MainMenu");//DAN PLEASE ADD IN THE WIN SCREEN FOR PLAYER ONE
+            } 
         }
 
     }

@@ -1075,6 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc7de40c4b3e9a409a4d5e521898569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 429701522}
   playerOne: {fileID: 429701497}
   playerTwo: {fileID: 769541161}
   playerTwoMaxLife: 6
@@ -1201,6 +1202,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack2: {fileID: 429701519}
+--- !u!95 &429701522 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1924588342510616088, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+  m_PrefabInstance: {fileID: 1924588343863587007}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &438489924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,6 +2829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc7de40c4b3e9a409a4d5e521898569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 769541187}
   playerOne: {fileID: 429701497}
   playerTwo: {fileID: 769541161}
   playerTwoMaxLife: 6
@@ -2949,6 +2956,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack2: {fileID: 769541184}
+--- !u!95 &769541187 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1924588342510616088, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+  m_PrefabInstance: {fileID: 945867975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &824374243
 GameObject:
   m_ObjectHideFlags: 0
@@ -5232,6 +5244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc7de40c4b3e9a409a4d5e521898569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   playerOne: {fileID: 0}
   playerTwo: {fileID: 0}
   playerTwoMaxLife: 100
