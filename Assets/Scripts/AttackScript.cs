@@ -15,7 +15,7 @@ namespace DanCon
         private bool isBlocked = false; // prevents player from attacking whilst block is held
 
         [SerializeField] private Animator animator;
-
+        [SerializeField] private Damaged damageEffect;
         [SerializeField] private Transform attackPoint;
         [SerializeField] private float attackRange = 1f;
         [SerializeField] private LayerMask playerLayers;
@@ -89,7 +89,8 @@ namespace DanCon
             Collider2D[]hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
             foreach (Collider2D player in hitPlayers)
             {
-                    player.GetComponent<DamageCalculator>().HurtPlayerTwo(attackDamage);
+                player.GetComponent<DamageCalculator>().HurtPlayerTwo(attackDamage);
+                player.GetComponent<Damaged>().Flash();
             }
         }
 
@@ -103,15 +104,9 @@ namespace DanCon
             Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
             foreach (Collider2D player in hitPlayers)
             {
-                if (isBlocked == true)
-                {
-                    return;
-                }
 
-                else
-                {
-                    player.GetComponent<DamageCalculator>().HurtPlayerOne(attackDamage);
-                }
+                player.GetComponent<DamageCalculator>().HurtPlayerOne(attackDamage);
+                player.GetComponent<Damaged>().Flash();
             }
 
         }

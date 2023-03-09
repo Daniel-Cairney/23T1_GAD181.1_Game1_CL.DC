@@ -1207,6 +1207,20 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 1924588342510616088, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
   m_PrefabInstance: {fileID: 1924588343863587007}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &429701528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429701497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9eff93477bff5c448ba7af844a77aef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: e5ad21ea6d852e543bbebb0585b5c608, type: 2}
+  duration: 0.125
 --- !u!1 &438489924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2961,6 +2975,20 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 1924588342510616088, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
   m_PrefabInstance: {fileID: 945867975}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &769541193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769541161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9eff93477bff5c448ba7af844a77aef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: e5ad21ea6d852e543bbebb0585b5c608, type: 2}
+  duration: 0.125
 --- !u!1 &824374243
 GameObject:
   m_ObjectHideFlags: 0
@@ -3439,8 +3467,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1924588342510616087, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: damageEffect
+      value: 
+      objectReference: {fileID: 769541193}
+    - target: {fileID: 1924588342510616087, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: playerLayers.m_Bits
       value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924588342549466830, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: m_TagString
+      value: Hurt
       objectReference: {fileID: 0}
     - target: {fileID: 1924588344000931892, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: jump
@@ -5770,6 +5806,14 @@ PrefabInstance:
     - target: {fileID: 1924588342510616087, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: attackDamage
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924588342510616087, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: damageEffect
+      value: 
+      objectReference: {fileID: 429701528}
+    - target: {fileID: 1924588342549466830, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
+      propertyPath: m_TagString
+      value: Hurt
       objectReference: {fileID: 0}
     - target: {fileID: 1924588344000931892, guid: 60a8f09b01388104faf99a8a3e0a49ad, type: 3}
       propertyPath: jump

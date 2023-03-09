@@ -10,7 +10,7 @@ namespace DanCon
         public AudioSource attack2;
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Delete))
+            if (Input.GetKeyDown(KeyCode.Comma))
             {
                 attack2.Play();
             }

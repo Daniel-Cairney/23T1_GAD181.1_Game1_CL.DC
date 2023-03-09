@@ -10,6 +10,7 @@ namespace DanCon
     public class DamageCalculator : MonoBehaviour
     {
 
+
         [SerializeField] private Animator animator;
         private bool diesOne;
         private bool diesTwo;
@@ -53,6 +54,8 @@ namespace DanCon
             {
                 animator.SetBool("Dies", true);
             }
+
+          
         }
 
         public void HurtPlayerTwo(int damage)
@@ -87,6 +90,7 @@ namespace DanCon
             // same as above but for the other player
             playerOneMaxLife -= damage;
 
+
             for (int i = 0; i < pOneSword.Length; i++)
 
                 if (playerOneMaxLife > i)
@@ -107,13 +111,13 @@ namespace DanCon
             if (gameObject.CompareTag("PlayerOne") && playerOneMaxLife <= 0)
             {
                 
-                SceneManager.LoadScene("GameOverScreen"); //DAN PLEASE ADD IN THE WIN SCREEN FOR PLAYER TWO
+                SceneManager.LoadScene("P2GameOver"); //DAN PLEASE ADD IN THE WIN SCREEN FOR PLAYER TWO
             }
 
             else if (gameObject.CompareTag("PlayerTwo") && playerTwoMaxLife <= 0)
             {
                 
-                SceneManager.LoadScene("P2GameOver");//DAN PLEASE ADD IN THE WIN SCREEN FOR PLAYER ONE
+                SceneManager.LoadScene("GameOverScreen");//DAN PLEASE ADD IN THE WIN SCREEN FOR PLAYER ONE
             } 
         }
 
