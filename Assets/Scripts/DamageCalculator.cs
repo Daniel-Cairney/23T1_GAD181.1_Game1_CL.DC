@@ -113,7 +113,7 @@ namespace DanCon
             else if (gameObject.CompareTag("PlayerTwo") && playerTwoMaxLife <= 0)
             {
                 
-                SceneManager.LoadScene("MainMenu");//DAN PLEASE ADD IN THE WIN SCREEN FOR PLAYER ONE
+                SceneManager.LoadScene("P2GameOver");//DAN PLEASE ADD IN THE WIN SCREEN FOR PLAYER ONE
             } 
         }
 
