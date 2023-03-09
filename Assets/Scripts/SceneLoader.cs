@@ -41,6 +41,11 @@ namespace DanCon
         {
             SceneManager.LoadScene("ObjectiveTutorial");
         }
+
+        public void P2GameOver()
+        {
+            SceneManager.LoadScene("P2GameOver");
+        }
     }
 
 }

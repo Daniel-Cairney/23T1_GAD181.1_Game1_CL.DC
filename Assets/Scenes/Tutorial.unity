@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '      ''period''         ''delete'''
+  m_text: '      ''period''           ''comma'''
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9edd93db03654dd49ae5057587a7d881, type: 2}
   m_sharedMaterial: {fileID: 6904089416973656430, guid: 9edd93db03654dd49ae5057587a7d881, type: 2}
